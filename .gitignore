@@ -1,0 +1,16 @@
+# Exports
+*.gbr*
+*.drl
+
+# Backups
+*.bak
+*-backups*
+*.zip
+*-bak
+
+# Generated files
+*.net
+*.erc
+
+# Local settings
+*_prl
