@@ -402,6 +402,10 @@
     [
       "0ca11ce9-cbfc-4b57-961c-3886bedba2c0",
       "InstructionRegister"
+    ],
+    [
+      "a613061e-184e-47f8-9c29-33359d1a6633",
+      "ALU"
     ]
   ],
   "text_variables": {}
