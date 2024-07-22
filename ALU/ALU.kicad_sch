@@ -5765,7 +5765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "N14"
+		(property "Footprint" "_DownloadFootprints:4x_xor"
 			(at 62.23 114.3 0)
 			(effects
 				(font
@@ -6074,7 +6074,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 270.2052 149.86 0)
 			(effects
 				(font
@@ -6412,7 +6412,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x08_P1.00mm_Vertical"
 			(at 20.32 153.67 0)
 			(effects
 				(font
@@ -7113,7 +7113,7 @@
 				)
 			)
 		)
-		(property "Footprint" "N20"
+		(property "Footprint" "_DownloadFootprints:8x_tristate_transceiver"
 			(at 160.02 25.4 0)
 			(effects
 				(font
@@ -7441,7 +7441,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x08_P1.00mm_Vertical"
 			(at 20.32 128.27 0)
 			(effects
 				(font
@@ -7731,7 +7731,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Horizontal"
 			(at 20.32 86.36 0)
 			(effects
 				(font
@@ -7870,7 +7870,7 @@
 				)
 			)
 		)
-		(property "Footprint" "N16"
+		(property "Footprint" "_DownloadFootprints:4bit_full_adder"
 			(at 191.77 41.91 0)
 			(effects
 				(font
@@ -8532,7 +8532,7 @@
 				)
 			)
 		)
-		(property "Footprint" "N16"
+		(property "Footprint" "_DownloadFootprints:4bit_full_adder"
 			(at 191.77 76.2 0)
 			(effects
 				(font
@@ -8644,7 +8644,7 @@
 				)
 			)
 		)
-		(property "Footprint" "N14"
+		(property "Footprint" "_DownloadFootprints:4x_xor"
 			(at 62.23 147.32 0)
 			(effects
 				(font
