@@ -8,6 +8,7 @@
 *.zip
 *-bak
 *.lck
+*#auto_saved_files#
 
 # Generated files
 *.net
