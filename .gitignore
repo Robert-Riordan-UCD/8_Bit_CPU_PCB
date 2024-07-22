@@ -11,6 +11,12 @@
 # Generated files
 *.net
 *.erc
+fp-info-cache
 
 # Local settings
 *_prl
+
+# FIXME: Need to pull libraries from relative paths not global paths so repo can be used on any device
+# Footprint and Symbol file paths
+fp-lib-table
+sym-lib-table
