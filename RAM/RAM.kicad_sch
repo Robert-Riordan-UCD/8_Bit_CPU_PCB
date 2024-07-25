@@ -1,0 +1,409 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5d332551-33f6-4491-a826-882274bc7f5d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 36.83 43.18)
+		(size 26.67 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "acc97a6d-2734-4118-b9c0-fcc1a4fca6ae")
+		(property "Sheetname" "AtmegaRamEmulatorA"
+			(at 36.83 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "atmega_ram_emulator.kicad_sch"
+			(at 36.83 69.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A3" input
+			(at 54.61 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4ae16836-7dd5-4fc7-8b88-6e50b892b128")
+		)
+		(pin "~{WE}" input
+			(at 36.83 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a737b9f8-f30f-4d6d-a6e1-39e60c01f766")
+		)
+		(pin "A2" input
+			(at 52.07 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f571feab-7482-4222-b7b5-71c155ef38d2")
+		)
+		(pin "~{CS}" input
+			(at 36.83 57.15 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bf4ac4f3-8ec5-44d1-be7f-44f2a8aaec6a")
+		)
+		(pin "Di2" input
+			(at 36.83 50.8 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7af3e20a-0bf2-40ab-abf8-ba3ef881845d")
+		)
+		(pin "Di0" input
+			(at 36.83 45.72 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9a59eb5e-997c-4f37-8f3e-c1a3e4e8cde2")
+		)
+		(pin "Di1" input
+			(at 36.83 48.26 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "85a6c80f-c8fd-448a-b52f-33bf7eb145d6")
+		)
+		(pin "Di3" input
+			(at 36.83 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "77649aa1-5941-4db2-8807-a01aface53f2")
+		)
+		(pin "A0" input
+			(at 49.53 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "04d04445-0d76-403e-aa0c-64833166a9d9")
+		)
+		(pin "A1" input
+			(at 46.99 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "62a5c1d6-9fa4-4757-9145-b3fe77c42459")
+		)
+		(pin "Do3" bidirectional
+			(at 63.5 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6df40088-da90-48c7-b653-509ab1558c77")
+		)
+		(pin "Do2" bidirectional
+			(at 63.5 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "31448a64-de1b-4df3-bfb6-0d74d087a095")
+		)
+		(pin "Do0" bidirectional
+			(at 63.5 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ce9cf739-e666-4459-9882-0e8fe70120c0")
+		)
+		(pin "Do1" bidirectional
+			(at 63.5 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ddb3a186-cf44-4cac-8084-c1d6e8f6fce0")
+		)
+		(pin "Rx" input
+			(at 36.83 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "82c4c1f1-cf7e-47db-84dd-02523729307a")
+		)
+		(pin "Tx" output
+			(at 36.83 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "26ea23f9-5fee-4846-ba57-11a67a16f363")
+		)
+		(instances
+			(project "RAM"
+				(path "/5d332551-33f6-4491-a826-882274bc7f5d"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 36.83 77.47)
+		(size 26.67 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d4879710-3e51-4f6c-bd90-581859fa44c4")
+		(property "Sheetname" "AtmegaRamEmulatorB"
+			(at 36.83 76.7584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "atmega_ram_emulator.kicad_sch"
+			(at 36.83 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A3" input
+			(at 54.61 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "05e70451-c9ce-4501-8ae5-d020fc84f625")
+		)
+		(pin "~{WE}" input
+			(at 36.83 93.98 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d296eb7f-f3ee-4130-910a-d64f68cb977e")
+		)
+		(pin "A2" input
+			(at 52.07 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "565a6a98-a20a-497c-b64a-6a181ac3a73d")
+		)
+		(pin "~{CS}" input
+			(at 36.83 91.44 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "497c4f3f-7746-48c4-9931-56019a2e5861")
+		)
+		(pin "Di2" input
+			(at 36.83 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "67add6ec-c30f-4482-9040-5cf5c13d0735")
+		)
+		(pin "Di0" input
+			(at 36.83 80.01 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e7690721-5922-43db-8257-ca30bd3b1637")
+		)
+		(pin "Di1" input
+			(at 36.83 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7699f815-74b6-49e0-8ef4-f950b03e2bd1")
+		)
+		(pin "Di3" input
+			(at 36.83 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f50b1ce4-7a85-4a80-9519-78c69d82c451")
+		)
+		(pin "A0" input
+			(at 49.53 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e2e47eeb-36e7-4956-9382-f514a9275645")
+		)
+		(pin "A1" input
+			(at 46.99 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "366827fa-f5d9-44a2-ae0f-99cb0f76f165")
+		)
+		(pin "Do3" bidirectional
+			(at 63.5 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2705cfe5-e263-4444-9546-13f0e63c4bc7")
+		)
+		(pin "Do2" bidirectional
+			(at 63.5 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "29019d0f-912c-472c-838b-150feacf74a6")
+		)
+		(pin "Do0" bidirectional
+			(at 63.5 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "47ec6f9f-5c95-43a3-a82d-d5d10204e420")
+		)
+		(pin "Do1" bidirectional
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f40affba-e291-4c23-a2a2-404bfb1a284e")
+		)
+		(pin "Rx" input
+			(at 36.83 97.79 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "01dd4e5e-cb9f-4e05-b99c-33f07acda203")
+		)
+		(pin "Tx" output
+			(at 36.83 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9ad5aeed-c490-4e3d-a518-ec18ba946736")
+		)
+		(instances
+			(project "RAM"
+				(path "/5d332551-33f6-4491-a826-882274bc7f5d"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
