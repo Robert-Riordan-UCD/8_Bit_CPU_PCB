@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "6b3905de-b085-41ce-95b1-92b3aa6c5c58")
+	(uuid "86d56a38-e16a-46c5-a64c-8d0583772cc5")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C"
@@ -2202,7 +2202,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
+		(property "Footprint" "_DownloadFootprints:Cp_2mm_pin_spacing"
 			(at 39.0652 36.83 0)
 			(effects
 				(font
@@ -2344,7 +2344,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 87.63 79.0448 0)
 			(effects
 				(font
@@ -2556,7 +2556,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 95.25 68.8848 0)
 			(effects
 				(font
@@ -2630,7 +2630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 46.482 33.02 90)
 			(effects
 				(font
@@ -2704,7 +2704,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:DIP-28_W7.62mm"
+		(property "Footprint" "_DownloadFootprints:DIP787W46P254L3467H508Q28"
 			(at 68.58 58.42 0)
 			(effects
 				(font

@@ -6419,7 +6419,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 203.2 146.05 0)
 			(effects
 				(font
@@ -6596,7 +6596,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "N16"
+		(property "Footprint" "_DownloadFootprints:2_to_1_selector"
 			(at 184.15 88.9 0)
 			(effects
 				(font
@@ -6844,7 +6844,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
 			(at 30.48 100.33 0)
 			(effects
 				(font
@@ -7044,7 +7044,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
 			(at 30.48 60.96 0)
 			(effects
 				(font
@@ -7510,7 +7510,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "N16"
+		(property "Footprint" "_DownloadFootprints:2_to_1_selector"
 			(at 214.63 88.9 0)
 			(effects
 				(font
@@ -7684,7 +7684,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "1k"
 			(at 25.4 134.6199 0)
 			(effects
 				(font
@@ -7693,7 +7693,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 21.082 133.35 90)
 			(effects
 				(font
@@ -7830,7 +7830,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Horizontal"
 			(at 266.7 38.1 0)
 			(effects
 				(font
@@ -8514,7 +8514,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "N16"
+		(property "Footprint" "_DownloadFootprints:2_to_1_selector"
 			(at 58.42 181.61 0)
 			(effects
 				(font
@@ -8999,7 +8999,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.01uF"
 			(at 26.67 124.4599 0)
 			(effects
 				(font
@@ -9008,7 +9008,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 23.8252 127 0)
 			(effects
 				(font
@@ -9350,7 +9350,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Horizontal"
 			(at 49.53 20.32 0)
 			(effects
 				(font
@@ -9760,7 +9760,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "8BitCPUFootprints:4x_and"
 			(at 36.83 133.35 0)
 			(effects
 				(font
