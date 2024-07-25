@@ -9,6 +9,7 @@
 *-bak
 *.lck
 *#auto_saved_files#
+*_autosave*
 
 # Generated files
 *.net
