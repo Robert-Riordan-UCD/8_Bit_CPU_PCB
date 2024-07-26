@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "86d56a38-e16a-46c5-a64c-8d0583772cc5")
+	(uuid "889f72d8-09a9-41b7-a674-af9b5ab49230")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C"
@@ -1362,7 +1362,7 @@
 		(uuid "ed911baa-6a12-4e61-bd9b-b4bbd05a4090")
 	)
 	(no_connect
-		(at 71.12 48.26)
+		(at 50.8 45.72)
 		(uuid "1976d8c8-9292-49f8-bfc2-8428b7901082")
 	)
 	(no_connect
@@ -1370,11 +1370,11 @@
 		(uuid "39a4bcbb-5c78-4d23-a36c-6d9a2c78f87a")
 	)
 	(no_connect
-		(at 50.8 68.58)
+		(at 50.8 38.1)
 		(uuid "466d09a2-18f5-41c2-ba30-10094f255755")
 	)
 	(no_connect
-		(at 71.12 45.72)
+		(at 50.8 68.58)
 		(uuid "a915ba5b-192a-43d5-939a-e1a94b508a8e")
 	)
 	(no_connect
@@ -1413,7 +1413,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 38.1) (xy 50.8 38.1)
+			(xy 45.72 58.42) (xy 50.8 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1433,16 +1433,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 60.96) (xy 50.8 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1983262d-b1ab-4506-91a1-6c9352d0c207")
-	)
-	(wire
-		(pts
 			(xy 96.52 80.01) (xy 96.52 69.85)
 		)
 		(stroke
@@ -1453,7 +1443,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 45.72) (xy 50.8 45.72)
+			(xy 45.72 66.04) (xy 50.8 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1523,7 +1513,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 63.5) (xy 50.8 63.5)
+			(xy 45.72 40.64) (xy 50.8 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1580,6 +1570,16 @@
 			(type default)
 		)
 		(uuid "6fd54178-dc10-4588-8fef-03d7e7cd295a")
+	)
+	(wire
+		(pts
+			(xy 71.12 45.72) (xy 72.39 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "707786b7-572c-4e96-91ef-d8dfe1d2ff8e")
 	)
 	(wire
 		(pts
@@ -1673,7 +1673,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 66.04) (xy 50.8 66.04)
+			(xy 45.72 43.18) (xy 50.8 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1693,7 +1693,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 43.18) (xy 50.8 43.18)
+			(xy 45.72 63.5) (xy 50.8 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1733,16 +1733,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 58.42) (xy 50.8 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcb31478-b5e9-4374-9cf4-c1229f891a68")
-	)
-	(wire
-		(pts
 			(xy 48.26 36.83) (xy 48.26 73.66)
 		)
 		(stroke
@@ -1763,7 +1753,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 40.64) (xy 50.8 40.64)
+			(xy 45.72 60.96) (xy 50.8 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1810,6 +1800,16 @@
 			(type default)
 		)
 		(uuid "f07361f8-81f2-417b-87a0-6638f22e2d24")
+	)
+	(wire
+		(pts
+			(xy 71.12 48.26) (xy 72.39 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2eef49f-ae12-4729-9d37-117cadc14ec4")
 	)
 	(wire
 		(pts
@@ -1908,6 +1908,18 @@
 		)
 		(uuid "e7109f9a-0a0c-43ae-9aec-11d5309c26b4")
 	)
+	(hierarchical_label "Di1"
+		(shape input)
+		(at 72.39 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "031a9d56-3256-48ea-9c12-673335ea3a89")
+	)
 	(hierarchical_label "Do0"
 		(shape bidirectional)
 		(at 72.39 50.8 0)
@@ -1934,7 +1946,7 @@
 	)
 	(hierarchical_label "A0"
 		(shape input)
-		(at 45.72 38.1 180)
+		(at 45.72 58.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1956,9 +1968,21 @@
 		)
 		(uuid "3375e30d-f494-439c-9c2e-6fd70ef0d227")
 	)
+	(hierarchical_label "Di0"
+		(shape input)
+		(at 72.39 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3d705b00-cceb-4c40-bbbe-3e24eba7575f")
+	)
 	(hierarchical_label "Di3"
 		(shape input)
-		(at 45.72 66.04 180)
+		(at 45.72 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1982,7 +2006,7 @@
 	)
 	(hierarchical_label "A2"
 		(shape input)
-		(at 45.72 43.18 180)
+		(at 45.72 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1994,18 +2018,6 @@
 	)
 	(hierarchical_label "A1"
 		(shape input)
-		(at 45.72 40.64 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "94dc1950-f4f5-4c98-a307-e922cee3f610")
-	)
-	(hierarchical_label "Di1"
-		(shape input)
 		(at 45.72 60.96 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2014,7 +2026,7 @@
 			)
 			(justify right)
 		)
-		(uuid "9e4f8296-fd5b-4535-8f3e-c5f97ae11853")
+		(uuid "94dc1950-f4f5-4c98-a307-e922cee3f610")
 	)
 	(hierarchical_label "~{CS}"
 		(shape input)
@@ -2042,7 +2054,7 @@
 	)
 	(hierarchical_label "A3"
 		(shape input)
-		(at 45.72 45.72 180)
+		(at 45.72 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2051,18 +2063,6 @@
 			(justify right)
 		)
 		(uuid "b5b23b67-5621-4974-83df-5fc4bdb95da8")
-	)
-	(hierarchical_label "Di0"
-		(shape input)
-		(at 45.72 58.42 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d2bceb71-f138-4ffb-8b79-a09654e11f73")
 	)
 	(hierarchical_label "Do3"
 		(shape bidirectional)
@@ -2078,7 +2078,7 @@
 	)
 	(hierarchical_label "Di2"
 		(shape input)
-		(at 45.72 63.5 180)
+		(at 45.72 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2128,7 +2128,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "8BitCPUFootprints:16MHzCrystalOscillator"
 			(at 85.09 74.93 0)
 			(effects
 				(font
