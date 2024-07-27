@@ -4,9 +4,10 @@
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -0.5 0)
+		(at 0 -1.25 0)
 		(unlocked yes)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "054e4d7e-d612-4d8f-acd8-50d8417cab34")
 		(effects
 			(font
@@ -16,9 +17,10 @@
 		)
 	)
 	(property "Value" "16MHzCrystalOscillator"
-		(at 0 1 0)
+		(at 0 3.75 0)
 		(unlocked yes)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "9585bb52-64ba-4328-b576-a58147768eaf")
 		(effects
 			(font
@@ -28,7 +30,7 @@
 		)
 	)
 	(property "Footprint" ""
-		(at 0 0 0)
+		(at 0.25 8 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -41,7 +43,7 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at 0.25 8 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -54,7 +56,7 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 0 0)
+		(at 0.25 8 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -67,11 +69,53 @@
 		)
 	)
 	(attr through_hole)
+	(fp_line
+		(start 3.175 -2.3225)
+		(end -3.175 -2.325)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d3aa0de0-beb9-48d8-ab23-4d8f5986b882")
+	)
+	(fp_line
+		(start 3.1775 2.3225)
+		(end -3.175 2.32)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "45c490dd-f7a9-44f6-971a-81598827dda9")
+	)
+	(fp_arc
+		(start -3.175 2.32)
+		(mid -5.4975 -0.0025)
+		(end -3.175 -2.325)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e0ab6798-e2d2-4090-9d79-f6318cb9c850")
+	)
+	(fp_arc
+		(start 3.1775 -2.3225)
+		(mid 5.5 0)
+		(end 3.1775 2.3225)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7c7e0b51-cb98-4aee-893a-8687f056a5c5")
+	)
 	(fp_text user "${REFERENCE}"
-		(at 0 2.5 0)
+		(at 0 -3.25 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "26499221-2f26-4479-82c5-370e4cc632b8")
+		(uuid "902630dd-4c64-4a45-b0bf-47d6ed3a936c")
 		(effects
 			(font
 				(size 1 1)
@@ -80,26 +124,26 @@
 		)
 	)
 	(pad "1" thru_hole circle
-		(at -5 0)
+		(at -2.44 0)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "030ad44e-7f6a-42ab-b210-be27f8c5a0ba")
+		(uuid "edab343c-4e0f-4a18-a104-1c7177826417")
 	)
 	(pad "2" thru_hole circle
-		(at 5 0)
+		(at 2.44 0)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "7a5990ef-627e-40c8-898a-911dc4e56cff")
+		(uuid "ae8f00b5-ca01-4a85-b8c1-4e92c5f046a7")
 	)
 	(zone
 		(net 0)
 		(net_name "")
 		(layer "F.SilkS")
-		(uuid "bfbeecf8-acf4-4328-b90f-5e4cc01ed973")
+		(uuid "dc52e777-abac-4af0-ba46-145b7ed9e3eb")
 		(name "16MHz Crystal")
 		(hatch edge 0.5)
 		(connect_pads
@@ -120,7 +164,7 @@
 		)
 		(polygon
 			(pts
-				(xy -8.25 -5.5) (xy 8.25 -5.5) (xy 8.25 5.5) (xy -8.25 5.5)
+				(xy -5.5 -2.5) (xy 5.5 -2.5) (xy 5.5 2.5) (xy -5.5 2.5)
 			)
 		)
 	)
