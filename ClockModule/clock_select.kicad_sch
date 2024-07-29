@@ -2592,7 +2592,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 147.32 100.33 0)
 			(effects
 				(font
