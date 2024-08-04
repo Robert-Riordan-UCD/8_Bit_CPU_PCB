@@ -6564,7 +6564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18ad4a77-8cf0-45c3-84f1-104b8d941100")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR07"
 			(at 102.87 27.94 0)
 			(effects
 				(font
@@ -6614,7 +6614,7 @@
 		(instances
 			(project ""
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR010")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -6986,7 +6986,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3565d464-e50f-4a07-9e09-fa48434e75cd")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR08"
 			(at 119.38 116.84 0)
 			(effects
 				(font
@@ -7036,7 +7036,7 @@
 		(instances
 			(project "ALU"
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR07")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -7184,7 +7184,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "443b5366-562c-4959-8641-d2840d2089fb")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR01"
 			(at 45.72 50.8 0)
 			(effects
 				(font
@@ -7235,7 +7235,7 @@
 		(instances
 			(project "ALU"
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR02")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -7656,7 +7656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e4e492d-c222-4fcc-ac09-a856d2903766")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 119.38 149.86 0)
 			(effects
 				(font
@@ -7706,7 +7706,7 @@
 		(instances
 			(project ""
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -7877,7 +7877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85e5992e-2f79-41a3-b01c-da35a097a8e5")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR010"
 			(at 140.97 74.93 0)
 			(effects
 				(font
@@ -7927,7 +7927,7 @@
 		(instances
 			(project "ALU"
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR09")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8257,7 +8257,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a083fb91-c243-473a-8657-557ec4298547")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR02"
 			(at 35.56 53.34 0)
 			(effects
 				(font
@@ -8307,7 +8307,7 @@
 		(instances
 			(project "ALU"
 				(path "/62101b97-a334-4edf-8cb6-c85e816b5b90"
-					(reference "#PWR01")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
