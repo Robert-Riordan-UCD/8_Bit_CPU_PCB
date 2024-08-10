@@ -325,7 +325,7 @@
 			)
 		)
 	)
-	(symbol "4x_or"
+	(symbol "4x_nor"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -372,7 +372,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "4x_or_0_1"
+		(symbol "4x_nor_0_1"
 			(rectangle
 				(start -5.08 7.62)
 				(end 5.08 -10.16)
@@ -385,8 +385,8 @@
 				)
 			)
 		)
-		(symbol "4x_or_1_1"
-			(text "4xOR"
+		(symbol "4x_nor_1_1"
+			(text "4xNOR"
 				(at 0 -11.176 0)
 				(effects
 					(font
