@@ -3,11 +3,11 @@
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at 0 -7.5 0)
+	(property "Reference" "SW1"
+		(at 2 -0.18 -90)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "bf68eb9d-8151-4b57-aebb-825e494f4514")
+		(uuid "49059e5b-30d6-4339-8cd2-4c08048a42ef")
 		(effects
 			(font
 				(size 1 1)
@@ -15,11 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "DoubleThrowSwitch"
+	(property "Value" "SW_SPDT"
 		(at 0 7.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "2d424cd1-1e2c-4ab1-ad6e-efdbe9ce9916")
+		(uuid "22f10d4e-37d2-4882-99da-14b9e6d0676f")
 		(effects
 			(font
 				(size 1 1)
@@ -27,12 +27,12 @@
 			)
 		)
 	)
-	(property "Footprint" ""
+	(property "Footprint" "8BitCPUFootprints:DoubleThrowSwitch"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b53b7229-bb4c-4847-a23f-9aaf20472b73")
+		(uuid "b7a88114-0a80-4e82-8e92-b5b49733d60a")
 		(effects
 			(font
 				(size 1 1)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "14a27932-7f48-4a9c-aec0-3daa17965dbb")
+		(uuid "05126592-d0f3-4172-9bb1-bdde63c71b65")
 		(effects
 			(font
 				(size 1 1)
@@ -53,12 +53,12 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Switch, single pole double throw"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "065e3dd3-6a64-4305-9823-54a2ed18a4a8")
+		(uuid "bbba1f28-a542-4316-8c27-b2d4ea96fdd2")
 		(effects
 			(font
 				(size 1 1)
@@ -76,13 +76,13 @@
 		)
 		(fill none)
 		(layer "F.SilkS")
-		(uuid "0a217514-c72c-4f41-86dd-f0ae009a75ee")
+		(uuid "2ee7cfec-a5b4-40d3-a2c7-bbdd0a1add8d")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 9 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "663706a6-37b0-4555-8505-69fbb5c2cee2")
+		(uuid "2d85cd3a-16bb-4311-84f0-a4a29d3125c4")
 		(effects
 			(font
 				(size 1 1)
@@ -90,35 +90,35 @@
 			)
 		)
 	)
-	(pad "1" thru_hole circle
-		(at 0 -4.7)
-		(size 1.524 1.524)
-		(drill 0.762)
+	(pad "1" thru_hole oval
+		(at 0 -4.75 90)
+		(size 1.9 2.8)
+		(drill oval 1.1 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "bfffa7bf-53a2-45d7-a9fc-72648c4fbfdf")
+		(uuid "6f585571-bb44-412e-994b-d2e5b5d0071b")
 	)
-	(pad "2" thru_hole circle
-		(at 0 0)
-		(size 1.524 1.524)
-		(drill 0.762)
+	(pad "2" thru_hole oval
+		(at 0 0 90)
+		(size 1.9 2.8)
+		(drill oval 1.1 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "8a5d20fd-2265-437c-be04-25c4c8613734")
+		(uuid "6b78e83e-f8fd-49d0-bfc1-c6468567450f")
 	)
-	(pad "3" thru_hole circle
-		(at 0 4.7)
-		(size 1.524 1.524)
-		(drill 0.762)
+	(pad "3" thru_hole oval
+		(at 0 4.75 90)
+		(size 1.9 2.8)
+		(drill oval 1.1 2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "15e91603-91d0-492e-a549-7d38bd2de2f0")
+		(uuid "e62b3b41-ba4d-43a0-94ee-c5a60c2b2af1")
 	)
 	(zone
 		(net 0)
 		(net_name "")
 		(layer "Margin")
-		(uuid "11a0085e-ab21-4c83-9c1b-5d3771b503fe")
+		(uuid "52d0c5ac-7185-4ab5-9621-5663fc39e481")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
