@@ -1,6 +1,7 @@
 # Exports
 *.gbr*
 *.drl
+*.csv
 
 # Backups
 *.bak
