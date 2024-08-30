@@ -4999,7 +4999,7 @@
 		(uuid "03f11cff-50df-4ac2-9fc5-d58efeaef85c")
 	)
 	(label "Bus7"
-		(at 142.24 62.23 90)
+		(at 203.2 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5131,7 +5131,7 @@
 		(uuid "44e890dc-96e3-4877-b535-cd69b0cfb151")
 	)
 	(label "Bus5"
-		(at 147.32 62.23 90)
+		(at 198.12 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5142,7 +5142,7 @@
 		(uuid "48f16540-2abb-49c1-b4a2-4a7bc684f3bc")
 	)
 	(label "Bus3"
-		(at 195.58 62.23 90)
+		(at 149.86 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5175,7 +5175,7 @@
 		(uuid "68a21872-4652-4125-a658-b7c435f4ddfa")
 	)
 	(label "Bus1"
-		(at 200.66 62.23 90)
+		(at 144.78 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5208,7 +5208,7 @@
 		(uuid "7d53823d-ca84-4e01-abe5-3c9735f2e19f")
 	)
 	(label "Bus4"
-		(at 149.86 62.23 90)
+		(at 195.58 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5263,7 +5263,7 @@
 		(uuid "99f8abf2-f2d2-4367-a95e-265c3531a8f0")
 	)
 	(label "Bus2"
-		(at 198.12 62.23 90)
+		(at 147.32 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5384,7 +5384,7 @@
 		(uuid "cc060821-c69c-4987-970c-a1117d383ac7")
 	)
 	(label "Bus6"
-		(at 144.78 62.23 90)
+		(at 200.66 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5450,7 +5450,7 @@
 		(uuid "f4e8a130-d29e-45a2-907e-a7207484a902")
 	)
 	(label "Bus0"
-		(at 203.2 62.23 90)
+		(at 142.24 62.23 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
