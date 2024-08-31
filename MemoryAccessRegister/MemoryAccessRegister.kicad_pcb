@@ -2514,7 +2514,7 @@
 		(at 151.75 83.75 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R2"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "ba35295f-786c-41ec-9fd3-d17efdddc278")
@@ -4652,7 +4652,7 @@
 		(at 211.25 88.285 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R9"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "034111ab-d114-4dc5-9f4c-5599c10d37d8")
@@ -4937,7 +4937,7 @@
 			(uuid "926725f2-46cc-475c-a341-62ba97c58166")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "ca33d78b-16bd-4280-bca4-cc4df5da7eab")
@@ -5397,7 +5397,7 @@
 		(at 204.75 88.285 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R7"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "53c2a071-3645-453a-b854-e36a3736ebb0")
@@ -5682,7 +5682,7 @@
 			(uuid "293ef6f3-52af-443a-9485-9814365a7ebf")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "62b3550a-e61d-42d7-b3bb-879e0194cd3f")
@@ -6120,7 +6120,7 @@
 		(uuid "b5a4514b-29e3-4dcc-adca-b202c876568f")
 		(at 218.68 92.4 90)
 		(property "Reference" "U3"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "2643f8b9-27a4-4e2e-b84b-c7b7667fd202")
@@ -6339,7 +6339,7 @@
 			(uuid "dbd46d15-16dc-4990-a935-c371a2297fab")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "fe1687d4-299d-4426-b534-25e4748af232")
@@ -7547,7 +7547,7 @@
 		(at 207.9734 88.285 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R8"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "2b9cb187-1bcb-4292-b88a-864ffdd94100")
@@ -7832,7 +7832,7 @@
 			(uuid "05ed043e-d2dc-44fd-8687-a80c1b1d4d4b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "edf29938-ae8a-42f2-b8d3-97a1427be36b")
@@ -8026,7 +8026,7 @@
 		(at 155 83.75 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R3"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "82dc23fd-a95a-4992-9b08-870f8205d34c")
@@ -8349,7 +8349,7 @@
 		(at 201.5 88.285 -90)
 		(tags "CF14JT10K0 ")
 		(property "Reference" "R6"
-			(at 5.715 0 -90)
+			(at 5.715 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "2386d9d3-49e0-40d6-b909-fccf61bb7b6e")
@@ -8794,6 +8794,18 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "6x NOT gate"
+		(at 158.5 76 0)
+		(layer "F.SilkS")
+		(uuid "3242cc3a-1f5d-4ffa-9158-2b2d18a465e8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
 			)
 			(justify left bottom)
 		)
