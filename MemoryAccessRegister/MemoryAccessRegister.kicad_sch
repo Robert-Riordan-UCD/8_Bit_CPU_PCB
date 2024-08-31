@@ -4028,7 +4028,7 @@
 		(uuid "24aaa9a5-66c3-48a9-8f1d-a970b20e1b0b")
 	)
 	(label "~A2"
-		(at 66.04 36.83 180)
+		(at 66.04 26.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4061,7 +4061,7 @@
 		(uuid "2def4155-5a75-4cf1-98c9-32a0c3c2e1b9")
 	)
 	(label "A2"
-		(at 66.04 39.37 180)
+		(at 66.04 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4292,7 +4292,7 @@
 		(uuid "8977e756-a3d9-4b8d-b03b-f201b5cc1520")
 	)
 	(label "~A0"
-		(at 66.04 26.67 180)
+		(at 66.04 36.83 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4413,7 +4413,7 @@
 		(uuid "b1110c44-85c6-45b5-9a61-bee9c804b298")
 	)
 	(label "A0"
-		(at 66.04 29.21 180)
+		(at 66.04 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
