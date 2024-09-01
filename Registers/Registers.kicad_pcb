@@ -113,9 +113,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "Build/")
 		)
 	)
 	(net 0 "")
@@ -4980,7 +4980,7 @@
 			(uuid "3835680b-1bc4-4377-a902-122128b11003")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 8.89 360)
+			(at 0 8.89 0)
 			(layer "F.Fab")
 			(uuid "1213375b-75f8-4cca-a4ba-6e4acf7ca0d9")
 			(effects
