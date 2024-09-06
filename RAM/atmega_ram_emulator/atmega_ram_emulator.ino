@@ -1,11 +1,11 @@
 uint8_t memory[16]; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
 
-int address_pins[4] = {2, 3, 4, 5};
-int data_output_pins[4] = {6, 7, 8, 9};
-int data_input_pins[4] = {10, 11, 12, 13};
+int address_pins[4] = {A0, A1, A2, A3};
+int data_output_pins[4] = {5, 4, 3, 2};
+int data_input_pins[4] = {7, 6, 9, 10};
 
-int n_write_enable_pin = A0; // Write when low. Read when high
-int n_chip_select_pin = A1; // Read/write enabled when low. Output to high impedence when high
+int n_write_enable_pin = 8; // Write when low. Read when high
+int n_chip_select_pin = 19; // Read/write enabled when low. Output to high impedence when high
 
 void setup() {
   for (int i = 0; i < 4; i++) {
@@ -15,6 +15,8 @@ void setup() {
   }
   pinMode(n_write_enable_pin, INPUT);
   pinMode(n_chip_select_pin, INPUT);
+
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -43,4 +45,42 @@ void loop() {
       pinMode(data_output_pins[i], INPUT);
     }
   }
+
+//  Serial.print("~CS: ");
+//  Serial.print(digitalRead(n_chip_select_pin));
+//  Serial.print(", ~WE: ");
+//  Serial.print(digitalRead(n_write_enable_pin));\
+//  Serial.print(", Address: ");
+//  Serial.print(digitalRead(address_pins[3]));
+//  Serial.print(digitalRead(address_pins[2]));
+//  Serial.print(digitalRead(address_pins[1]));
+//  Serial.print(digitalRead(address_pins[0]));
+//  Serial.print(", Data in: ");
+//  Serial.print(digitalRead(data_input_pins[3]));
+//  Serial.print(digitalRead(data_input_pins[2]));
+//  Serial.print(digitalRead(data_input_pins[1]));
+//  Serial.print(digitalRead(data_input_pins[0]));
+//  Serial.print(", Data out: ");
+//  Serial.print(digitalRead(data_output_pins[3]));
+//  Serial.print(digitalRead(data_output_pins[2]));
+//  Serial.print(digitalRead(data_output_pins[1]));
+//  Serial.print(digitalRead(data_output_pins[0]));
+//  
+//  Serial.print(", Memory: ");
+  char strBuf[16*5];
+
+  for (int i = 0; i < 16; i++) {
+    sprintf(strBuf[5*i + 0], "%d", (int)((memory[i]>>3)&0x01));
+    sprintf(strBuf[5*i + 1], "%d", (int)((memory[i]>>2)&0x01));
+    sprintf(strBuf[5*i + 2], "%d", (int)((memory[i]>>1)&0x01));
+    sprintf(strBuf[5*i + 3], "%d", (int)((memory[i]>>0)&0x01));
+    sprintf(strBuf[5*i + 4], " ");
+//      Serial.print();
+//      Serial.print((int)(memory[i]&0x04));
+//      Serial.print((int)(memory[i]&0x02));
+//      Serial.print((int)(memory[i]&0x01));
+//      Serial.print(' ');
+  }
+  
+  Serial.println(strBuf);
 }
