@@ -620,6 +620,14 @@
     [
       "707279f8-562c-4ee0-b713-f923a04fe364",
       "ProgramCounter"
+    ],
+    [
+      "e17d6638-1f56-418f-886c-3ff74c9a9c65",
+      "Control"
+    ],
+    [
+      "119f76b4-6f05-4dbd-b43d-328ecfc5c099",
+      "MAR"
     ]
   ],
   "text_variables": {}

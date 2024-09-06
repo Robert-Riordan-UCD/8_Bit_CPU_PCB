@@ -545,7 +545,7 @@
 		)
 		(uuid "ac31491e-24fa-4695-a112-a832f489f763")
 	)
-	(hierarchical_label "~CLK"
+	(hierarchical_label "~{CLK}"
 		(shape output)
 		(at 248.92 45.72 180)
 		(fields_autoplaced yes)
@@ -569,7 +569,7 @@
 		)
 		(uuid "eafca8e9-b445-4e24-9fab-cd6fd787b729")
 	)
-	(hierarchical_label "Halt"
+	(hierarchical_label "HALT"
 		(shape input)
 		(at 248.92 48.26 180)
 		(fields_autoplaced yes)
