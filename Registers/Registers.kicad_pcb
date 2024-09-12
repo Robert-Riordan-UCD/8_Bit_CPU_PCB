@@ -9635,7 +9635,7 @@
 		)
 	)
 	(gr_text "~{RI}"
-		(at 147.5 77.5 0)
+		(at 147.475 76 0)
 		(layer "F.SilkS")
 		(uuid "12895934-e523-41bb-b545-7d08be40fb73")
 		(effects
@@ -9671,7 +9671,7 @@
 		)
 	)
 	(gr_text "CLK"
-		(at 147.5 75 0)
+		(at 147.475 73.5 0)
 		(layer "F.SilkS")
 		(uuid "1f74d757-574f-479a-b8b2-daa59f2e23e9")
 		(effects
@@ -9767,7 +9767,7 @@
 		)
 	)
 	(gr_text "~{WO}"
-		(at 147.5 82.5 0)
+		(at 147.475 81 0)
 		(layer "F.SilkS")
 		(uuid "3f5bb0f8-582a-4eb4-b272-9cf058664b05")
 		(effects
@@ -9839,7 +9839,7 @@
 		)
 	)
 	(gr_text "RST"
-		(at 147.5 80 0)
+		(at 147.475 78.5 0)
 		(layer "F.SilkS")
 		(uuid "5ae2b0a7-ece1-4f26-a559-dfd1a8f6105a")
 		(effects
@@ -10222,7 +10222,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text_box "A Register:\nUse North and West pins\nB Register:\nUse South and West pins\nInstruction Register:\nUse South(7-4) and East pins"
+	(gr_text_box "A Register:\nUse South and West pins\nB Register:\nUse North and West pins\nInstruction Register:\nUse South(7-4) and East pins"
 		(start 117.25 39.5)
 		(end 142.75 50)
 		(layer "F.SilkS")
