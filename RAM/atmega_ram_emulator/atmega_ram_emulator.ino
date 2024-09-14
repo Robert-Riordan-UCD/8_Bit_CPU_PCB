@@ -16,7 +16,7 @@ void setup() {
   pinMode(n_write_enable_pin, INPUT);
   pinMode(n_chip_select_pin, INPUT);
 
-  Serial.begin(9600);
+//  Serial.begin(9600);
 }
 
 void loop() {
@@ -67,20 +67,20 @@ void loop() {
 //  Serial.print(digitalRead(data_output_pins[0]));
 //  
 //  Serial.print(", Memory: ");
-  char strBuf[16*5];
-
-  for (int i = 0; i < 16; i++) {
-    sprintf(strBuf[5*i + 0], "%d", (int)((memory[i]>>3)&0x01));
-    sprintf(strBuf[5*i + 1], "%d", (int)((memory[i]>>2)&0x01));
-    sprintf(strBuf[5*i + 2], "%d", (int)((memory[i]>>1)&0x01));
-    sprintf(strBuf[5*i + 3], "%d", (int)((memory[i]>>0)&0x01));
-    sprintf(strBuf[5*i + 4], " ");
+//  char strBuf[16*5];
+//
+//  for (int i = 0; i < 16; i++) {
+//    sprintf(strBuf[5*i + 0], "%d", (int)((memory[i]>>3)&0x01));
+//    sprintf(strBuf[5*i + 1], "%d", (int)((memory[i]>>2)&0x01));
+//    sprintf(strBuf[5*i + 2], "%d", (int)((memory[i]>>1)&0x01));
+//    sprintf(strBuf[5*i + 3], "%d", (int)((memory[i]>>0)&0x01));
+//    sprintf(strBuf[5*i + 4], " ");
 //      Serial.print();
 //      Serial.print((int)(memory[i]&0x04));
 //      Serial.print((int)(memory[i]&0x02));
 //      Serial.print((int)(memory[i]&0x01));
 //      Serial.print(' ');
-  }
+//  }
   
-  Serial.println(strBuf);
+//  Serial.println(strBuf);
 }
