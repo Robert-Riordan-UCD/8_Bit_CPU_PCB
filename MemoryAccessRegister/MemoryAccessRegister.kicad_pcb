@@ -8787,7 +8787,7 @@
 		)
 	)
 	(gr_text "B2"
-		(at 225.75 79.5 0)
+		(at 225.75 82 0)
 		(layer "F.SilkS")
 		(uuid "30c339f9-42c2-4db4-a360-47f42d235c1a")
 		(effects
@@ -8811,7 +8811,7 @@
 		)
 	)
 	(gr_text "B0"
-		(at 225.75 84.5 0)
+		(at 225.7 76.9 0)
 		(layer "F.SilkS")
 		(uuid "3bb14217-8dbb-4df5-892a-da9d1ccf12c5")
 		(effects
@@ -8919,7 +8919,7 @@
 		)
 	)
 	(gr_text "B1"
-		(at 225.75 82 0)
+		(at 225.75 79.5 0)
 		(layer "F.SilkS")
 		(uuid "6ac3b6c9-9300-4c40-93cd-8547591336cb")
 		(effects
@@ -8931,7 +8931,7 @@
 		)
 	)
 	(gr_text "B3"
-		(at 225.75 77 0)
+		(at 225.75 84.45 0)
 		(layer "F.SilkS")
 		(uuid "74fe3e87-2b2b-4d50-bda7-2088a603f382")
 		(effects
