@@ -12,23 +12,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 27.94 10.16 0)
+			(property "Reference" "U2"
+				(at 28.956 -7.366 90)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
+					(justify right)
 				)
 			)
 			(property "Value" "CD74HCT258E"
-				(at 27.94 7.62 0)
+				(at 25.4 -0.254 90)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
+					(justify right)
 				)
 			)
-			(property "Footprint" "N16"
+			(property "Footprint" "_DownloadFootprints:2_to_1_selector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -150,42 +152,6 @@
 						)
 					)
 				)
-				(pin input line
-					(at 55.88 -15.24 180)
-					(length 7.62)
-					(name "3A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 55.88 -12.7 180)
-					(length 7.62)
-					(name "3B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin output line
 					(at 55.88 -10.16 180)
 					(length 7.62)
@@ -197,42 +163,6 @@
 						)
 					)
 					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 55.88 -7.62 180)
-					(length 7.62)
-					(name "4A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 55.88 -5.08 180)
-					(length 7.62)
-					(name "4B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -413,6 +343,80 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CD74HCT258E_1_1"
+				(pin input line
+					(at 55.88 -15.24 180)
+					(length 7.62)
+					(name "3B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 55.88 -12.7 180)
+					(length 7.62)
+					(name "3A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 55.88 -7.62 180)
+					(length 7.62)
+					(name "4B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 55.88 -5.08 180)
+					(length 7.62)
+					(name "4A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3973,7 +3977,7 @@
 		(uuid "0116eb8c-041f-4287-8311-f441f41e1bc7")
 	)
 	(label "Prog 3"
-		(at 177.8 40.64 90)
+		(at 175.26 40.64 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4281,7 +4285,7 @@
 		(uuid "87bd1f3e-b89a-498f-8e33-5820d236f752")
 	)
 	(label "Prog 2"
-		(at 170.18 40.64 90)
+		(at 167.64 40.64 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4336,7 +4340,7 @@
 		(uuid "9fc4634f-1445-4d03-a620-01691e6af1b2")
 	)
 	(label "B2"
-		(at 167.64 40.64 90)
+		(at 170.18 40.64 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4435,7 +4439,7 @@
 		(uuid "bcca3536-1cb4-4d97-a904-4464bb85092b")
 	)
 	(label "B3"
-		(at 175.26 40.64 90)
+		(at 177.8 40.64 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
