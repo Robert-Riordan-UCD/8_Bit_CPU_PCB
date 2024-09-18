@@ -16,6 +16,7 @@
 *.net
 *.erc
 fp-info-cache
+*/Build/*
 
 # Local settings
 *_prl
