@@ -21,6 +21,9 @@ fp-info-cache
 # Local settings
 *_prl
 
+# Pluggins
+*place_footprint*
+
 # FIXME: Need to pull libraries from relative paths not global paths so repo can be used on any device
 # Footprint and Symbol file paths
 fp-lib-table
