@@ -3484,8 +3484,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "S"
-				(at 0 4.064 0)
+			(property "Reference" "S1"
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -3493,14 +3493,14 @@
 				)
 			)
 			(property "Value" "B3U-1000P"
-				(at 0 -2.54 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
 				)
 			)
-			(property "Footprint" "digikey-footprints:Switch_Tactile_SMD_B3U-1000P"
+			(property "Footprint" "_DownloadFootprints:tactile_switch"
 				(at 5.08 5.08 0)
 				(effects
 					(font
@@ -3734,14 +3734,14 @@
 				(pin passive line
 					(at 5.08 0 180)
 					(length 2.54)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9788,7 +9788,7 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "4"
 			(uuid "bab7fb2c-7f81-4d74-ba6d-f437e9570fa4")
 		)
 		(pin "1"
