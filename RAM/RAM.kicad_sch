@@ -6909,7 +6909,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 173.99 133.35 0)
 			(effects
 				(font
@@ -8408,7 +8408,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 151.13 133.35 0)
 			(effects
 				(font
@@ -8745,7 +8745,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 128.27 133.35 0)
 			(effects
 				(font
@@ -9093,7 +9093,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 181.61 133.35 0)
 			(effects
 				(font
@@ -9162,7 +9162,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 135.89 133.35 0)
 			(effects
 				(font
@@ -9917,7 +9917,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 143.51 133.35 0)
 			(effects
 				(font
@@ -10268,7 +10268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 166.37 133.35 0)
 			(effects
 				(font
@@ -10406,7 +10406,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D2.0mm_W4.8mm_H2.5mm_FlatTop"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 158.75 133.35 0)
 			(effects
 				(font
