@@ -8823,7 +8823,7 @@
 		)
 	)
 	(gr_text "Run"
-		(at 196.5 96.5 0)
+		(at 187.7 96.5 0)
 		(layer "F.SilkS")
 		(uuid "50ae8fc5-159e-4250-8e2f-e2c49afdd100")
 		(effects
@@ -8967,7 +8967,7 @@
 		)
 	)
 	(gr_text "Prog"
-		(at 187.25 96.5 0)
+		(at 195.3 96.5 0)
 		(layer "F.SilkS")
 		(uuid "a632dbad-41bb-4ee4-b051-0f3184d0fc06")
 		(effects
