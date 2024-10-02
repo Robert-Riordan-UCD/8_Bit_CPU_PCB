@@ -1863,7 +1863,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 134.62 59.69 0)
 			(effects
 				(font
@@ -2041,7 +2041,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 94.742 69.85 90)
 			(effects
 				(font
@@ -2111,7 +2111,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 103.632 69.85 90)
 			(effects
 				(font
@@ -2247,7 +2247,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 96.52 60.96 0)
 			(effects
 				(font
@@ -2317,7 +2317,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 105.41 60.96 0)
 			(effects
 				(font
@@ -2453,7 +2453,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 87.63 60.96 0)
 			(effects
 				(font
@@ -2589,7 +2589,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 85.852 69.85 90)
 			(effects
 				(font
@@ -2792,7 +2792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 66.04 62.23 0)
 			(effects
 				(font

@@ -2192,7 +2192,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 109.22 48.26 0)
 			(effects
 				(font
@@ -2296,7 +2296,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 109.22 78.74 0)
 			(effects
 				(font
@@ -2324,46 +2324,46 @@
 			)
 		)
 		(pin "7"
-			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed502")
+			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed503")
 		)
 		(pin "5"
-			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083db9")
+			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083dba")
 		)
 		(pin "14"
-			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235063")
+			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235064")
 		)
 		(pin "10"
-			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e967")
+			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e968")
 		)
 		(pin "6"
-			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc0")
+			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc1")
 		)
 		(pin "4"
-			(uuid "434bc0de-2b07-4570-8b28-ec031836b131")
+			(uuid "434bc0de-2b07-4570-8b28-ec031836b132")
 		)
 		(pin "3"
-			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7eff")
+			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7f00")
 		)
 		(pin "9"
-			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5cdf")
+			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5ce0")
 		)
 		(pin "11"
-			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacb")
+			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacc")
 		)
 		(pin "8"
-			(uuid "e106f096-bbde-4cde-812c-59951175535b")
+			(uuid "e106f096-bbde-4cde-812c-59951175535c")
 		)
 		(pin "13"
-			(uuid "f23f7735-1143-4c65-a76d-8a92973124db")
+			(uuid "f23f7735-1143-4c65-a76d-8a92973124dc")
 		)
 		(pin "2"
-			(uuid "ce48f2ed-9062-431c-a311-764611237f23")
+			(uuid "ce48f2ed-9062-431c-a311-764611237f24")
 		)
 		(pin "1"
-			(uuid "3fbf0b67-d8cd-4171-9172-000f597815e9")
+			(uuid "3fbf0b67-d8cd-4171-9172-000f597815ea")
 		)
 		(pin "12"
-			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7d")
+			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7e")
 		)
 		(instances
 			(project ""
@@ -2402,7 +2402,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 118.872 44.45 90)
 			(effects
 				(font
@@ -2668,7 +2668,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:tactile_switch"
 			(at 81.28 41.91 0)
 			(effects
 				(font
@@ -2942,7 +2942,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 118.872 88.9 90)
 			(effects
 				(font
@@ -3012,7 +3012,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 118.872 74.93 90)
 			(effects
 				(font
@@ -3082,7 +3082,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 152.4 52.07 0)
 			(effects
 				(font
@@ -3110,46 +3110,46 @@
 			)
 		)
 		(pin "7"
-			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed502")
+			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed504")
 		)
 		(pin "5"
-			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083db9")
+			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083dbb")
 		)
 		(pin "14"
-			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235063")
+			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235065")
 		)
 		(pin "10"
-			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e967")
+			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e969")
 		)
 		(pin "6"
-			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc0")
+			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc2")
 		)
 		(pin "4"
-			(uuid "434bc0de-2b07-4570-8b28-ec031836b131")
+			(uuid "434bc0de-2b07-4570-8b28-ec031836b133")
 		)
 		(pin "3"
-			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7eff")
+			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7f01")
 		)
 		(pin "9"
-			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5cdf")
+			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5ce1")
 		)
 		(pin "11"
-			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacb")
+			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacd")
 		)
 		(pin "8"
-			(uuid "e106f096-bbde-4cde-812c-59951175535b")
+			(uuid "e106f096-bbde-4cde-812c-59951175535d")
 		)
 		(pin "13"
-			(uuid "f23f7735-1143-4c65-a76d-8a92973124db")
+			(uuid "f23f7735-1143-4c65-a76d-8a92973124dd")
 		)
 		(pin "2"
-			(uuid "ce48f2ed-9062-431c-a311-764611237f23")
+			(uuid "ce48f2ed-9062-431c-a311-764611237f25")
 		)
 		(pin "1"
-			(uuid "3fbf0b67-d8cd-4171-9172-000f597815e9")
+			(uuid "3fbf0b67-d8cd-4171-9172-000f597815eb")
 		)
 		(pin "12"
-			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7d")
+			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7f")
 		)
 		(instances
 			(project ""
@@ -3188,7 +3188,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 118.872 60.96 90)
 			(effects
 				(font
@@ -3258,7 +3258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 87.122 54.61 90)
 			(effects
 				(font
@@ -3326,7 +3326,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 109.22 92.71 0)
 			(effects
 				(font
@@ -3354,46 +3354,46 @@
 			)
 		)
 		(pin "7"
-			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed502")
+			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed505")
 		)
 		(pin "5"
-			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083db9")
+			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083dbc")
 		)
 		(pin "14"
-			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235063")
+			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235066")
 		)
 		(pin "10"
-			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e967")
+			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e96a")
 		)
 		(pin "6"
-			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc0")
+			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc3")
 		)
 		(pin "4"
-			(uuid "434bc0de-2b07-4570-8b28-ec031836b131")
+			(uuid "434bc0de-2b07-4570-8b28-ec031836b134")
 		)
 		(pin "3"
-			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7eff")
+			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7f02")
 		)
 		(pin "9"
-			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5cdf")
+			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5ce2")
 		)
 		(pin "11"
-			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacb")
+			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eace")
 		)
 		(pin "8"
-			(uuid "e106f096-bbde-4cde-812c-59951175535b")
+			(uuid "e106f096-bbde-4cde-812c-59951175535e")
 		)
 		(pin "13"
-			(uuid "f23f7735-1143-4c65-a76d-8a92973124db")
+			(uuid "f23f7735-1143-4c65-a76d-8a92973124de")
 		)
 		(pin "2"
-			(uuid "ce48f2ed-9062-431c-a311-764611237f23")
+			(uuid "ce48f2ed-9062-431c-a311-764611237f26")
 		)
 		(pin "1"
-			(uuid "3fbf0b67-d8cd-4171-9172-000f597815e9")
+			(uuid "3fbf0b67-d8cd-4171-9172-000f597815ec")
 		)
 		(pin "12"
-			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7d")
+			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf80")
 		)
 		(instances
 			(project ""
@@ -3430,7 +3430,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 109.22 64.77 0)
 			(effects
 				(font
@@ -3458,46 +3458,46 @@
 			)
 		)
 		(pin "7"
-			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed502")
+			(uuid "cb1fea1d-c18e-40fd-8174-dbd00d6ed506")
 		)
 		(pin "5"
-			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083db9")
+			(uuid "546f4eb4-ffe8-46cb-97c6-e28941083dbd")
 		)
 		(pin "14"
-			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235063")
+			(uuid "38e6ab97-ede0-41f9-ba41-f29b9b235067")
 		)
 		(pin "10"
-			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e967")
+			(uuid "6c02c77b-3c7c-4749-a914-7706ca80e96b")
 		)
 		(pin "6"
-			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc0")
+			(uuid "d1763b26-0c3e-4a64-82fc-925f2c513dc4")
 		)
 		(pin "4"
-			(uuid "434bc0de-2b07-4570-8b28-ec031836b131")
+			(uuid "434bc0de-2b07-4570-8b28-ec031836b135")
 		)
 		(pin "3"
-			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7eff")
+			(uuid "9b88adaf-fc42-49ff-9150-40faf03a7f03")
 		)
 		(pin "9"
-			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5cdf")
+			(uuid "553798bc-28b3-4fc8-967a-9c9478ec5ce3")
 		)
 		(pin "11"
-			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacb")
+			(uuid "e6f0b591-93af-4fb5-aa33-c4a2c7a4eacf")
 		)
 		(pin "8"
-			(uuid "e106f096-bbde-4cde-812c-59951175535b")
+			(uuid "e106f096-bbde-4cde-812c-59951175535f")
 		)
 		(pin "13"
-			(uuid "f23f7735-1143-4c65-a76d-8a92973124db")
+			(uuid "f23f7735-1143-4c65-a76d-8a92973124df")
 		)
 		(pin "2"
-			(uuid "ce48f2ed-9062-431c-a311-764611237f23")
+			(uuid "ce48f2ed-9062-431c-a311-764611237f27")
 		)
 		(pin "1"
-			(uuid "3fbf0b67-d8cd-4171-9172-000f597815e9")
+			(uuid "3fbf0b67-d8cd-4171-9172-000f597815ed")
 		)
 		(pin "12"
-			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf7d")
+			(uuid "24123ead-e94d-4f1f-9833-82a3cf20cf81")
 		)
 		(instances
 			(project ""
