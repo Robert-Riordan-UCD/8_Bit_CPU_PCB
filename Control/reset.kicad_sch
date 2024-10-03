@@ -2384,7 +2384,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "446a6df7-88cd-4837-96e5-b40eadf16985")
-		(property "Reference" "R21"
+		(property "Reference" "R23"
 			(at 123.19 43.1799 0)
 			(effects
 				(font
@@ -2438,7 +2438,7 @@
 		(instances
 			(project "Control"
 				(path "/460bc1d8-5a70-4cad-87d6-3febe61be174/713e61f2-2f45-47e3-a661-3fcccc9dd80f"
-					(reference "R21")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -2924,7 +2924,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c2590dd-1176-4ac5-915e-9515968516a1")
-		(property "Reference" "R24"
+		(property "Reference" "R26"
 			(at 123.19 87.6299 0)
 			(effects
 				(font
@@ -2978,7 +2978,7 @@
 		(instances
 			(project "Control"
 				(path "/460bc1d8-5a70-4cad-87d6-3febe61be174/713e61f2-2f45-47e3-a661-3fcccc9dd80f"
-					(reference "R24")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -2994,7 +2994,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac60c854-1007-422f-ba5d-762762054833")
-		(property "Reference" "R23"
+		(property "Reference" "R25"
 			(at 123.19 73.6599 0)
 			(effects
 				(font
@@ -3048,7 +3048,7 @@
 		(instances
 			(project "Control"
 				(path "/460bc1d8-5a70-4cad-87d6-3febe61be174/713e61f2-2f45-47e3-a661-3fcccc9dd80f"
-					(reference "R23")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -3170,7 +3170,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b37a00cd-403b-4289-ab50-5312116f3e23")
-		(property "Reference" "R22"
+		(property "Reference" "R24"
 			(at 123.19 59.6899 0)
 			(effects
 				(font
@@ -3224,7 +3224,7 @@
 		(instances
 			(project "Control"
 				(path "/460bc1d8-5a70-4cad-87d6-3febe61be174/713e61f2-2f45-47e3-a661-3fcccc9dd80f"
-					(reference "R22")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -3240,7 +3240,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bdd9553e-d4b2-4b27-82c5-3a8bd7044c2a")
-		(property "Reference" "R20"
+		(property "Reference" "R22"
 			(at 91.44 53.3399 0)
 			(effects
 				(font
@@ -3294,7 +3294,7 @@
 		(instances
 			(project ""
 				(path "/460bc1d8-5a70-4cad-87d6-3febe61be174/713e61f2-2f45-47e3-a661-3fcccc9dd80f"
-					(reference "R20")
+					(reference "R22")
 					(unit 1)
 				)
 			)
