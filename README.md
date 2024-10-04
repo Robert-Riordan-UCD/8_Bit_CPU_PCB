@@ -7,3 +7,7 @@ This is my version of [Ben Eaters 8-bit breadboard SAP-1 CPU](https://eater.net/
 ### Random Access Memory
 
 1. RAM IC's have been replaced with ATMega328-PU's. This should allow me to have persistant programs between power cycles.
+
+## License
+
+CERN Open Hardware Licence Version 2 - Permissive
