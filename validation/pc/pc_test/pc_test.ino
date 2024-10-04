@@ -15,13 +15,13 @@
 #define COUNTER_SIZE 4
 #define BUS_FLOATING 0xFF
 
-#define RST_N 2
-#define CLK 3
-#define JMP_N 12
-#define CO_N 13
-#define CE A0
+#define CO_N 10
+#define RST_N 11
+#define CLK 12
+#define CE 13
+#define JMP_N 18 /* SDA */
 
-int BUS[BUS_SIZE] = {4, 5, 6, 7, 8, 9, 10, 11};
+int BUS[BUS_SIZE] = {2, 3, 4, 5, 6, 7, 8, 9};
 
 bool test_equal(int value, int expected, char* test) {
   if (value == expected) {
