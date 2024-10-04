@@ -13,7 +13,7 @@
  * 5) Test write then read for every value 0x00 to 0xFF
  */
 
-#define CLK_HALF_PERIOD_MS 1
+#define CLK_HALF_PERIOD_MS 100
 
 #define BUS_SIZE 8
 #define BUS_FLOATING 0xFF
@@ -24,7 +24,7 @@
 #define CLK 13
 
 int BUS[BUS_SIZE] = {2, 3, 4, 5, 6, 7, 8, 9};
-int INTERNAL_STATE[BUS_SIZE] = { A0, A1, A2, A3, A4, 19 /* SCL */, 18 /* SDA */, A5};
+int INTERNAL_STATE[BUS_SIZE] = {A0, A1, A2, A3, A4, A5, 18 /* SDA */, 19 /* SCL */};
 
 /* Basic utility functions */
 void print_bin8(int n) {
@@ -103,13 +103,13 @@ uint8_t read_bus() {
 }
 
 uint8_t read_internal_state() {
-  uint8_t interanl_state=0;
+  uint8_t internal_state=0;
 
   for (int i=BUS_SIZE-1; i>=0; i--) {
-    interanl_state += digitalRead(INTERNAL_STATE[i]) << i;
+    internal_state += digitalRead(INTERNAL_STATE[i]) << i;
   }
 
-  return interanl_state;
+  return internal_state;
 }
 
 // Get the value from the register on to the bus
@@ -129,9 +129,36 @@ bool test_read_in() {
   reset();
   bool pass = true;
 
-  read_in(0b10101010);
+  read_in(0b00000000);
+  pass &= test_equal(read_internal_state(), 0b00000000, "Read in");
 
-  pass &= test_equal(read_internal_state(), 0b10101010, "Read in");
+  read_in(0b00000001);
+  pass &= test_equal(read_internal_state(), 0b00000001, "Read in");
+
+  read_in(0b00000010);
+  pass &= test_equal(read_internal_state(), 0b00000010, "Read in");
+
+  read_in(0b00000100);
+  pass &= test_equal(read_internal_state(), 0b00000100, "Read in");
+
+  read_in(0b00001000);
+  pass &= test_equal(read_internal_state(), 0b00001000, "Read in");
+
+  read_in(0b00010000);
+  pass &= test_equal(read_internal_state(), 0b00010000, "Read in");
+
+  read_in(0b00100000);
+  pass &= test_equal(read_internal_state(), 0b00100000, "Read in");
+
+  read_in(0b01000000);
+  pass &= test_equal(read_internal_state(), 0b01000000, "Read in");
+
+  read_in(0b10000000);
+  pass &= test_equal(read_internal_state(), 0b10000000, "Read in");
+
+  read_in(0b11111111);
+  pass &= test_equal(read_internal_state(), 0b11111111, "Read in");
+
   return pass;
 }
 
@@ -177,13 +204,13 @@ int test_read_in_write_out_all() {
 
   for (unsigned int i = 0; i <= 0xFF; i++) {
     read_in(i & 0xFF);
-    pass_count += test_equal(read_internal_state(), i & 0xFF, "Read/Write");
+    pass_count += test_equal(write_out(), i & 0xFF, "Read/Write");
   }
   return pass_count;
 }
 
 void setup() {
-  Serial.begin(57600);
+  Serial.begin(9600);
 
   /* Pin setup */
   pinMode(WO_N, OUTPUT);
@@ -198,7 +225,7 @@ void setup() {
   
   for (int i=0; i<8; i++) {
     pinMode(BUS[i], INPUT_PULLUP);
-    pinMode(INTERNAL_STATE[i], INPUT);
+    pinMode(INTERNAL_STATE[i], INPUT_PULLUP);
   }
 
   /* Tests */
@@ -220,7 +247,7 @@ void setup() {
   Serial.println(reset ? "PASS" : "FAIL");
   
   Serial.print("No OP:\t\t");
-  Serial.println(reset ? "PASS" : "FAIL");
+  Serial.println(noop ? "PASS" : "FAIL");
   
   Serial.print("Read/Write:\t");
   Serial.print(read_in_write_out_all >= 100 ? "PASS" : "FAIL");
