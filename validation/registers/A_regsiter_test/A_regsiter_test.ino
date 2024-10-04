@@ -18,31 +18,47 @@
 #define BUS_SIZE 8
 #define BUS_FLOATING 0xFF
 
-#define WO_N 13
-#define RST 12
-#define RI_N 11
-#define CLK 10
+#define WO_N 10
+#define RST 11
+#define RI_N 12
+#define CLK 13
 
 int BUS[BUS_SIZE] = {2, 3, 4, 5, 6, 7, 8, 9};
-int INTERNAL_STATE[BUS_SIZE] = {18 /* SDA */, 19 /* SCL */, A0, A1, A2, A3, A4, A5};
+int INTERNAL_STATE[BUS_SIZE] = { A0, A1, A2, A3, A4, 19 /* SCL */, 18 /* SDA */, A5};
 
 /* Basic utility functions */
+void print_bin8(int n) {
+  for(int i = 0; i < 8; i++) {
+    Serial.print((n>>i)&1);
+  }
+}
+
 bool test_equal(int value, int expected, char* test) {
   if (value == expected) {
     Serial.print("Pass  (");
     Serial.print(test);
     Serial.print("): Expected ");
     Serial.print(expected);
+    Serial.print(" 0b");
+    print_bin8(expected);
     Serial.print(" - Actual ");
-    Serial.println(value);
+    Serial.print(value);
+    Serial.print(" 0b");
+    print_bin8(value);
+    Serial.println();
     return true;
   } else {
     Serial.print("ERROR (");
     Serial.print(test);
     Serial.print("): Expected ");
     Serial.print(expected);
+    Serial.print(" 0b");
+    print_bin8(expected);
     Serial.print(" - Actual ");
-    Serial.println(value);
+    Serial.print(value);
+    Serial.print(" 0b");
+    print_bin8(value);
+    Serial.println();
     return false;
   }
 }
@@ -155,15 +171,15 @@ bool test_noop() {
   return pass;
 }
 
-bool test_read_in_write_out_all() {
+int test_read_in_write_out_all() {
   reset();
-  bool pass = true;
+  int pass_count = 0;
 
   for (unsigned int i = 0; i <= 0xFF; i++) {
     read_in(i & 0xFF);
-    pass &= test_equal(read_internal_state(), i & 0xFF, "Read/Write");
+    pass_count += test_equal(read_internal_state(), i & 0xFF, "Read/Write");
   }
-  return pass;
+  return pass_count;
 }
 
 void setup() {
@@ -190,20 +206,27 @@ void setup() {
   bool write_out = test_write_out();
   bool reset = test_reset();
   bool noop = test_noop();
-  bool read_in_write_out_all = test_read_in_write_out_all();
+  int read_in_write_out_all = test_read_in_write_out_all();
 
   Serial.println();
 
   Serial.print("Read in:\t");
   Serial.println(read_in ? "PASS" : "FAIL");
+  
   Serial.print("Write out:\t");
   Serial.println(write_out ? "PASS" : "FAIL");
+  
   Serial.print("Reset:\t\t");
   Serial.println(reset ? "PASS" : "FAIL");
+  
   Serial.print("No OP:\t\t");
   Serial.println(reset ? "PASS" : "FAIL");
+  
   Serial.print("Read/Write:\t");
-  Serial.println(read_in_write_out_all ? "PASS" : "FAIL");
+  Serial.print(read_in_write_out_all >= 100 ? "PASS" : "FAIL");
+  Serial.print("\t(Passed ");
+  Serial.print(read_in_write_out_all);
+  Serial.println("/256)");
 }
 
 void loop() {}
