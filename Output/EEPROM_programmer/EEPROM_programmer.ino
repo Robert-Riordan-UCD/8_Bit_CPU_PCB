@@ -11,9 +11,9 @@ const uint8_t digits[10] = {
   0b11111100, /* 0 */
   0b01100000, /* 1 */
   0b11011010, /* 2 */
-  0b11100100, /* 3 */
-  0b01101010, /* 4 */
-  0b11011010, /* 5 */
+  0b11110010, /* 3 */
+  0b01100110, /* 4 */
+  0b10110110, /* 5 */
   0b10111110, /* 6 */
   0b11100000, /* 7 */
   0b11111110, /* 8 */
@@ -75,14 +75,15 @@ void setup() {
 
   /* Write digits to all values address values */
   for (int address = 0; address <= 255; address++) {
-    writeEEPROM(address, digits[address%10]);
-    writeEEPROM(address+255, digits[(address/10)%10]);
-    writeEEPROM(address+255*2, digits[(address/100)%100]);
-    writeEEPROM(address+255*3, 0);
+    writeEEPROM(address, digits[(address/100)%100]); // 100's
+    writeEEPROM(address+256, digits[address%10]); // 1's
+    writeEEPROM(address+256*2, digits[(address/10)%10]); // 10's
+    writeEEPROM(address+256*3, 0); // 1000's. Always off because the max is 255 (8-bits)
     Serial.print("Writing address ");
     Serial.println(address);
   }
 
+  /* Read data out */
   for (int i = 0; i < 256; i++) {
     uint8_t data = readEEPROM(i);
     if (data < 0x10) {
