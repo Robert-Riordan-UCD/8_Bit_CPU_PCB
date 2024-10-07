@@ -1230,7 +1230,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c12c90f-f2c3-44ed-a3a8-7f7b65f04f8e")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR014"
 			(at 109.22 82.55 0)
 			(effects
 				(font
@@ -1280,7 +1280,7 @@
 		(instances
 			(project ""
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/050af5a1-5dac-41e0-a6f2-7dd6742b296f"
-					(reference "#PWR016")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -1296,7 +1296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8fe33048-c2dc-40db-8c30-32b35018448a")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG01"
 			(at 90.17 109.855 0)
 			(effects
 				(font
@@ -1347,7 +1347,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/050af5a1-5dac-41e0-a6f2-7dd6742b296f"
-					(reference "#FLG02")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -1431,7 +1431,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8233ec7-e2a6-4332-b779-62632f9658b2")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR015"
 			(at 118.11 102.87 0)
 			(effects
 				(font
@@ -1481,7 +1481,7 @@
 		(instances
 			(project ""
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/050af5a1-5dac-41e0-a6f2-7dd6742b296f"
-					(reference "#PWR017")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -1498,7 +1498,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd5c75cb-ee14-48f7-864f-b062de960f1e")
-		(property "Reference" "#FLG01"
+		(property "Reference" "#FLG02"
 			(at 111.76 76.835 0)
 			(effects
 				(font
@@ -1549,7 +1549,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/050af5a1-5dac-41e0-a6f2-7dd6742b296f"
-					(reference "#FLG01")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -1565,7 +1565,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eaad249a-ce6b-4174-9f9a-84af41b44eab")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR013"
 			(at 92.71 114.3 0)
 			(effects
 				(font
@@ -1615,7 +1615,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/050af5a1-5dac-41e0-a6f2-7dd6742b296f"
-					(reference "#PWR015")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
