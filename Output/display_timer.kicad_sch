@@ -3073,7 +3073,7 @@
 				)
 			)
 		)
-		(property "Footprint" "_DownloadFootprints:Cp_2mm_pin_spacing"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 41.91 47.2948 0)
 			(effects
 				(font
@@ -3426,7 +3426,7 @@
 				)
 			)
 		)
-		(property "Footprint" "_DownloadFootprints:Cp_2mm_pin_spacing"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 41.91 54.3052 0)
 			(effects
 				(font
