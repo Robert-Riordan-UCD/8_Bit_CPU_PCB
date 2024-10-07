@@ -5,7 +5,20 @@
 #define WRITE_EN_N 13
 
 #define NUM_IO 8
-int IO_PINS[8] = {5, 6, 7, 8, 9, 10, 11, 12};
+const int IO_PINS[8] = {5, 6, 7, 8, 9, 10, 11, 12};
+
+const uint8_t digits[10] = {
+  0b11111100, /* 0 */
+  0b01100000, /* 1 */
+  0b11011010, /* 2 */
+  0b11100100, /* 3 */
+  0b01101010, /* 4 */
+  0b11011010, /* 5 */
+  0b10111110, /* 6 */
+  0b11100000, /* 7 */
+  0b11111110, /* 8 */
+  0b11110110  /* 9 */  
+};
 
 void setAddress(uint16_t address, bool output_enable) {
   digitalWrite(SHIFT_LATCH, LOW);
@@ -47,19 +60,28 @@ void writeEEPROM(uint16_t address, uint8_t data) {
 void setup() {
   Serial.begin(9600);
   Serial.println();
-  
+
+  /* Pin setup */
   pinMode(SHIFT_DATA, OUTPUT);
   pinMode(SHIFT_CLK, OUTPUT);
   pinMode(SHIFT_LATCH, OUTPUT);
 
   digitalWrite(WRITE_EN_N, HIGH);
   pinMode(WRITE_EN_N, OUTPUT);
-
-  for (int i = 0; i < 256; i++) {
-    writeEEPROM(i, i);
+  
+  for (int i = NUM_IO-1; i >= 0; i--) {
+    pinMode(IO_PINS[i], INPUT);
   }
 
-  readEEPROM(0);
+  /* Write digits to all values address values */
+  for (int address = 0; address <= 255; address++) {
+    writeEEPROM(address, digits[address%10]);
+    writeEEPROM(address+255, digits[(address/10)%10]);
+    writeEEPROM(address+255*2, digits[(address/100)%100]);
+    writeEEPROM(address+255*3, 0);
+    Serial.print("Writing address ");
+    Serial.println(address);
+  }
 
   for (int i = 0; i < 256; i++) {
     uint8_t data = readEEPROM(i);
