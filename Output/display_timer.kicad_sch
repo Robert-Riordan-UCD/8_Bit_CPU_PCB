@@ -2252,7 +2252,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 86.36 56.642 90)
 			(effects
 				(font
@@ -2493,7 +2493,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:2x_2_to_4_demux"
 			(at 67.31 101.6 0)
 			(effects
 				(font
@@ -2672,7 +2672,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
 			(at 76.2 56.642 90)
 			(effects
 				(font
@@ -3073,7 +3073,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:Cp_2mm_pin_spacing"
 			(at 41.91 47.2948 0)
 			(effects
 				(font
@@ -3426,7 +3426,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "_DownloadFootprints:Cp_2mm_pin_spacing"
 			(at 41.91 54.3052 0)
 			(effects
 				(font

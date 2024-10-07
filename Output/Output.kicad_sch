@@ -4256,7 +4256,7 @@
 		(uuid "0a04de36-6bc4-429e-b321-f272ffb24854")
 	)
 	(label "D1"
-		(at 107.95 35.56 0)
+		(at 107.95 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4267,7 +4267,7 @@
 		(uuid "13a7aa56-861f-468c-81fb-24286d627bbe")
 	)
 	(label "D5"
-		(at 157.48 80.01 180)
+		(at 157.48 90.17 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4278,13 +4278,13 @@
 		(uuid "14a1d4f4-d897-41ae-a124-1ce4c08cf70d")
 	)
 	(label "dp"
-		(at 218.44 102.87 0)
+		(at 157.48 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "1713ac5c-1e0a-41a4-b2a9-9642f0c74f84")
 	)
@@ -4300,13 +4300,13 @@
 		(uuid "19661c32-6a37-450b-9d17-bc57876825ee")
 	)
 	(label "e"
-		(at 218.44 95.25 0)
+		(at 157.48 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "25f15d66-8ddb-4b48-8f8e-b368bb570314")
 	)
@@ -4322,7 +4322,7 @@
 		(uuid "27f5cc6f-ed08-4005-9a18-8adcab643622")
 	)
 	(label "D6"
-		(at 107.95 96.52 0)
+		(at 107.95 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4344,7 +4344,7 @@
 		(uuid "2dba5c14-6d90-43f3-9fd5-1ec99334787d")
 	)
 	(label "CLK"
-		(at 41.91 63.5 0)
+		(at 41.91 71.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4377,7 +4377,7 @@
 		(uuid "3b77d39b-e0fb-4346-bd5c-88b4636722c3")
 	)
 	(label "D4"
-		(at 107.95 91.44 0)
+		(at 107.95 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4388,18 +4388,18 @@
 		(uuid "3f5408de-15eb-4e8d-91a0-eb3a88430234")
 	)
 	(label "d"
-		(at 218.44 92.71 0)
+		(at 157.48 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "3fdeda2f-19ad-4e80-9cc3-25a491b92827")
 	)
 	(label "D3"
-		(at 107.95 40.64 0)
+		(at 107.95 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4410,7 +4410,7 @@
 		(uuid "40eeb977-fa81-436a-ac63-1365fd60276d")
 	)
 	(label "f"
-		(at 218.44 97.79 0)
+		(at 218.44 95.25 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4432,7 +4432,7 @@
 		(uuid "45367c25-916a-42d3-b7a5-bf7baa0790d9")
 	)
 	(label "D2"
-		(at 157.48 87.63 180)
+		(at 157.48 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4476,7 +4476,7 @@
 		(uuid "511a9df1-bf95-49ff-82a0-25ffd17fb3d5")
 	)
 	(label "Bus 5"
-		(at 82.55 93.98 180)
+		(at 82.55 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4498,7 +4498,7 @@
 		(uuid "51b53329-03b4-4b11-b6bb-f1c29127e49b")
 	)
 	(label "RST"
-		(at 41.91 68.58 0)
+		(at 41.91 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4509,7 +4509,7 @@
 		(uuid "53fd0a93-df0a-42df-b2e4-ef88d804c504")
 	)
 	(label "D2"
-		(at 107.95 38.1 0)
+		(at 107.95 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4520,7 +4520,7 @@
 		(uuid "5423b0f9-401f-4eb9-92df-c1793175d1a8")
 	)
 	(label "D4"
-		(at 157.48 82.55 180)
+		(at 157.48 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4553,29 +4553,29 @@
 		(uuid "5cce4c46-0ddd-4bbc-84c1-7520affcfa10")
 	)
 	(label "c"
-		(at 157.48 100.33 180)
+		(at 218.44 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "611f5072-433f-48d7-85c2-42e0f4699475")
 	)
 	(label "b"
-		(at 157.48 97.79 180)
+		(at 218.44 97.79 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "65939d36-2c2e-4eb4-922d-44c78da88200")
 	)
 	(label "D6"
-		(at 157.48 77.47 180)
+		(at 157.48 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4619,7 +4619,7 @@
 		(uuid "7c7dd224-a531-450c-82ff-1465c29e322a")
 	)
 	(label "2's Comp"
-		(at 41.91 71.12 0)
+		(at 41.91 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4663,7 +4663,7 @@
 		(uuid "8278f270-0205-4372-8bdf-29f3f4b2eea3")
 	)
 	(label "Bus 7"
-		(at 82.55 99.06 180)
+		(at 82.55 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4685,7 +4685,7 @@
 		(uuid "8b860e94-dfee-43fd-9c63-b281e308a003")
 	)
 	(label "~{En}"
-		(at 41.91 66.04 0)
+		(at 41.91 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4696,7 +4696,7 @@
 		(uuid "92515de4-c9f1-4d2f-b969-122c677d25e6")
 	)
 	(label "D1"
-		(at 157.48 90.17 180)
+		(at 157.48 80.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4707,7 +4707,7 @@
 		(uuid "93894cb7-8462-4df2-820a-925ebfa53980")
 	)
 	(label "D7"
-		(at 107.95 99.06 0)
+		(at 107.95 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4718,7 +4718,7 @@
 		(uuid "93a6402b-d03b-4204-b0b4-f6973edc2b7b")
 	)
 	(label "D3"
-		(at 157.48 85.09 180)
+		(at 157.48 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4751,7 +4751,7 @@
 		(uuid "9804bcef-0060-4b95-abd8-cf9b17e2823a")
 	)
 	(label "Bus 2"
-		(at 82.55 38.1 180)
+		(at 82.55 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4773,7 +4773,7 @@
 		(uuid "9c98b105-89d7-4bbd-9066-efbb51bf886b")
 	)
 	(label "Bus 3"
-		(at 82.55 40.64 180)
+		(at 82.55 33.02 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4806,7 +4806,7 @@
 		(uuid "9fb108b5-bdae-4960-8f65-37d8e03f8744")
 	)
 	(label "Bus 1"
-		(at 82.55 35.56 180)
+		(at 82.55 38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4817,7 +4817,7 @@
 		(uuid "a04e196c-22dd-44dd-a71b-ee56e48f6f3a")
 	)
 	(label "Bus 6"
-		(at 82.55 96.52 180)
+		(at 82.55 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4839,7 +4839,7 @@
 		(uuid "a8e069dd-1f6c-489b-b87b-eabd1232715d")
 	)
 	(label "D5"
-		(at 107.95 93.98 0)
+		(at 107.95 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4894,7 +4894,7 @@
 		(uuid "c1b50b64-dc5e-4a89-95c6-bf85aae073a8")
 	)
 	(label "D0"
-		(at 157.48 92.71 180)
+		(at 157.48 82.55 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4916,7 +4916,7 @@
 		(uuid "ce2ce420-3953-49af-9066-b2feab297345")
 	)
 	(label "D7"
-		(at 157.48 74.93 180)
+		(at 157.48 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4927,13 +4927,13 @@
 		(uuid "cf63dcdf-99de-47d4-a394-723dc0ec3f4d")
 	)
 	(label "a"
-		(at 157.48 95.25 180)
+		(at 218.44 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d8929758-0ed6-4a56-8a1f-272604402438")
 	)
@@ -4960,7 +4960,7 @@
 		(uuid "db398368-98f3-4533-a00b-3e2e14e5a70e")
 	)
 	(label "Bus 4"
-		(at 82.55 91.44 180)
+		(at 82.55 99.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4993,7 +4993,7 @@
 		(uuid "f1042a14-8f07-4419-9778-34b5d5b7d7a2")
 	)
 	(label "D0"
-		(at 107.95 33.02 0)
+		(at 107.95 40.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5004,7 +5004,7 @@
 		(uuid "f112f8da-1c0c-4587-af36-ab261c317a5b")
 	)
 	(label "Bus 0"
-		(at 82.55 33.02 180)
+		(at 82.55 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5186,7 +5186,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 95.25 106.68 0)
 			(effects
 				(font
@@ -5365,7 +5365,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 95.25 48.26 0)
 			(effects
 				(font
@@ -5946,7 +5946,7 @@
 				)
 			)
 		)
-		(property "Footprint" "28P6"
+		(property "Footprint" "_DownloadFootprints:eeprom"
 			(at 157.48 69.85 0)
 			(effects
 				(font
