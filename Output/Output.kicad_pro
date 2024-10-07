@@ -580,28 +580,8 @@
       "Root"
     ],
     [
-      "ac84326f-8e35-4922-ad5d-170f017a2aed",
-      "OutputDisplay"
-    ],
-    [
-      "829bbd52-3ad2-4fd6-a907-3ff9ff187d62",
-      "7SegmentShiftRegister"
-    ],
-    [
-      "f74b3d93-1b03-45c1-a730-4f8a86419698",
-      "7SegmentShiftRegister1"
-    ],
-    [
-      "4ca4684f-5943-401f-ba32-bc7fd1806244",
-      "7SegmentShiftRegister2"
-    ],
-    [
-      "1de1b698-6f11-42ef-b753-7cf62e46ba17",
-      "7SegmentShiftRegister3"
-    ],
-    [
-      "0f104a29-2b6c-4f7e-9863-632b398ef711",
-      "MCU"
+      "c1c66350-f8ad-4109-81b0-a0d7296f9bbf",
+      "DisplayTimer"
     ]
   ],
   "text_variables": {}
