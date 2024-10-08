@@ -5788,6 +5788,17 @@
 		)
 		(uuid "cc5eb46a-c079-4064-9f48-d5a90cb78274")
 	)
+	(text "Note: Selector output is inverted"
+		(exclude_from_sim no)
+		(at 184.912 18.034 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "da9bb894-8292-485a-977a-af5440e9d853")
+	)
 	(label "Data in 7"
 		(at 232.41 33.02 90)
 		(fields_autoplaced yes)

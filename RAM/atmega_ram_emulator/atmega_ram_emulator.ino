@@ -21,23 +21,23 @@ void setup() {
 
 void loop() {
   if (digitalRead(n_chip_select_pin) == LOW) {
-    if (digitalRead(n_write_enable_pin) == LOW) { // Write out
-      uint16_t address = digitalRead(address_pins[0]) + 2*digitalRead(address_pins[1]) + 4*digitalRead(address_pins[2])+8*digitalRead(address_pins[3]);
-      for (int i = 0; i < 4; i++) {
-        pinMode(data_output_pins[i], OUTPUT); // Change from high impedence to output
-        digitalWrite(data_output_pins[i], (memory[address]>>i)&0x01);
+    if (digitalRead(n_write_enable_pin) == LOW) { // Write to RAM
+      for (int i = 0; i < 4; i++) { // Set output to high impedence when not in use
+        pinMode(data_output_pins[i], INPUT);
       }
-    } else { // Read in
+      
       uint16_t address = digitalRead(address_pins[0]) + 2*digitalRead(address_pins[1]) + 4*digitalRead(address_pins[2])+8*digitalRead(address_pins[3]);
       uint8_t data_in = 
         ((uint8_t)digitalRead(data_input_pins[0])<<0) +
         ((uint8_t)digitalRead(data_input_pins[1])<<1) +
         ((uint8_t)digitalRead(data_input_pins[2])<<2) +
         ((uint8_t)digitalRead(data_input_pins[3])<<3);
-      memory[address] = data_in;
-
-      for (int i = 0; i < 4; i++) { // Set output to high impedence when not in use
-        pinMode(data_output_pins[i], INPUT);
+      memory[address] = data_in ^ 0b1111;
+    } else { // Read from RAM
+      uint16_t address = digitalRead(address_pins[0]) + 2*digitalRead(address_pins[1]) + 4*digitalRead(address_pins[2])+8*digitalRead(address_pins[3]);
+      for (int i = 0; i < 4; i++) {
+        pinMode(data_output_pins[i], OUTPUT); // Change from high impedence to output
+        digitalWrite(data_output_pins[i], (memory[address]>>i)&0x01);
       }
     }
   } else { // Set output to high impedence when not in use
