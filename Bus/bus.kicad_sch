@@ -3655,7 +3655,7 @@
 		)
 		(uuid "d9357b47-4a8d-4221-8f81-d23285f18864")
 	)
-	(label "Output_EN"
+	(label "Output_~{EN}"
 		(at 158.75 161.29 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3809,7 +3809,7 @@
 		)
 		(uuid "f4222453-5e7d-4fda-a78e-2d80e12a6104")
 	)
-	(label "Output_EN"
+	(label "Output_~{EN}"
 		(at 60.96 180.34 0)
 		(fields_autoplaced yes)
 		(effects
@@ -7208,16 +7208,6 @@
 			)
 			(uuid "2b2b2a13-fe1b-4a27-98fa-b78dc766dd1c")
 		)
-		(pin "Output_EN" output
-			(at 59.69 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "5a08f149-25d6-412a-bb23-749cafd81c78")
-		)
 		(pin "RAM_~{WRITE}" output
 			(at 59.69 163.83 0)
 			(effects
@@ -7267,6 +7257,16 @@
 				(justify right)
 			)
 			(uuid "ce7045f7-574f-4aa8-8f4f-fe12a9cae4b2")
+		)
+		(pin "Output_~{EN}" output
+			(at 59.69 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0b4840aa-b5d0-41a7-b792-b4916c054efd")
 		)
 		(instances
 			(project "bus"
