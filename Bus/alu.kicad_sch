@@ -1077,7 +1077,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 83.82) (xy 45.72 83.82)
+			(xy 44.45 67.31) (xy 45.72 67.31)
 		)
 		(stroke
 			(width 0)
@@ -1087,7 +1087,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 86.36) (xy 45.72 86.36)
+			(xy 44.45 64.77) (xy 45.72 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1109,7 +1109,7 @@
 	)
 	(hierarchical_label "B3"
 		(shape bidirectional)
-		(at 44.45 71.12 0)
+		(at 44.45 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1145,7 +1145,7 @@
 	)
 	(hierarchical_label "B1"
 		(shape bidirectional)
-		(at 44.45 66.04 0)
+		(at 44.45 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1169,7 +1169,7 @@
 	)
 	(hierarchical_label "B6"
 		(shape bidirectional)
-		(at 44.45 78.74 0)
+		(at 44.45 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1181,7 +1181,7 @@
 	)
 	(hierarchical_label "B0"
 		(shape bidirectional)
-		(at 44.45 63.5 0)
+		(at 44.45 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1193,7 +1193,7 @@
 	)
 	(hierarchical_label "B2"
 		(shape bidirectional)
-		(at 44.45 68.58 0)
+		(at 44.45 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1217,7 +1217,7 @@
 	)
 	(hierarchical_label "B5"
 		(shape bidirectional)
-		(at 44.45 76.2 0)
+		(at 44.45 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1241,7 +1241,7 @@
 	)
 	(hierarchical_label "B4"
 		(shape bidirectional)
-		(at 44.45 73.66 0)
+		(at 44.45 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1265,7 +1265,7 @@
 	)
 	(hierarchical_label "B7"
 		(shape bidirectional)
-		(at 44.45 81.28 0)
+		(at 44.45 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1277,7 +1277,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 45.72 83.82 90)
+		(at 45.72 67.31 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1285,8 +1286,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "170b07d4-801b-4a7a-a057-f0d1f950e964")
-		(property "Reference" "#PWR011"
-			(at 52.07 83.82 0)
+		(property "Reference" "#PWR012"
+			(at 52.07 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1295,7 +1296,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 49.53 83.8199 90)
+			(at 49.53 67.3101 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1304,7 +1305,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 83.82 0)
+			(at 45.72 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1313,7 +1314,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 83.82 0)
+			(at 45.72 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1322,7 +1323,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 83.82 0)
+			(at 45.72 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1336,7 +1337,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/a613061e-184e-47f8-9c29-33359d1a6633"
-					(reference "#PWR011")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -1344,15 +1345,16 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 45.72 86.36 270)
+		(at 45.72 64.77 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "2f75a96e-e9aa-41b7-a3df-d0a4e0aff2c4")
-		(property "Reference" "#PWR012"
-			(at 41.91 86.36 0)
+		(property "Reference" "#PWR011"
+			(at 41.91 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1361,7 +1363,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 50.8 86.36 90)
+			(at 50.8 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1369,7 +1371,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 86.36 0)
+			(at 45.72 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1378,7 +1380,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 86.36 0)
+			(at 45.72 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1387,7 +1389,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 45.72 86.36 0)
+			(at 45.72 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1401,7 +1403,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/a613061e-184e-47f8-9c29-33359d1a6633"
-					(reference "#PWR012")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -1492,8 +1494,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x10_Pin")
-		(at 39.37 76.2 0)
-		(mirror x)
+		(at 39.37 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1502,7 +1503,7 @@
 		(fields_autoplaced yes)
 		(uuid "79fbd77d-496a-41fd-910d-dad611ce31f2")
 		(property "Reference" "J8"
-			(at 38.1 73.6599 0)
+			(at 38.1 77.4701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1511,7 +1512,7 @@
 			)
 		)
 		(property "Value" "Conn_01x10_Pin"
-			(at 38.1 76.1999 0)
+			(at 38.1 74.9301 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1520,7 +1521,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical"
-			(at 39.37 76.2 0)
+			(at 39.37 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1529,7 +1530,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 76.2 0)
+			(at 39.37 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1538,7 +1539,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x10, script generated"
-			(at 39.37 76.2 0)
+			(at 39.37 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)

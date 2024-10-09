@@ -1097,7 +1097,7 @@
 	)
 	(hierarchical_label "RI"
 		(shape input)
-		(at 99.06 97.79 180)
+		(at 100.33 147.32 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1109,7 +1109,7 @@
 	)
 	(hierarchical_label "CLK"
 		(shape input)
-		(at 99.06 100.33 180)
+		(at 100.33 144.78 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1131,9 +1131,9 @@
 		)
 		(uuid "d48df9e6-ba58-48ff-8c14-2684107b6c4e")
 	)
-	(hierarchical_label "~{WO}"
+	(hierarchical_label "~{RO}"
 		(shape input)
-		(at 99.06 102.87 180)
+		(at 100.33 142.24 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1154,7 +1154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bba938b4-5060-4e66-92d6-63002601d197")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR020"
 			(at 92.71 118.11 0)
 			(effects
 				(font
@@ -1205,7 +1205,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/61b8f38e-6730-4fc5-8ab9-627730f56fd6"
-					(reference "#PWR025")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -1222,7 +1222,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d538802a-f696-4042-90bf-998f23681505")
-		(property "Reference" "J21"
+		(property "Reference" "J17"
 			(at 106.68 125.7299 0)
 			(effects
 				(font
@@ -1300,7 +1300,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/61b8f38e-6730-4fc5-8ab9-627730f56fd6"
-					(reference "J21")
+					(reference "J17")
 					(unit 1)
 				)
 			)
@@ -1308,7 +1308,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 104.14 100.33 180)
+		(at 105.41 144.78 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1316,8 +1317,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ebb8c2f3-bd93-47f5-86b5-954799560083")
-		(property "Reference" "J20"
-			(at 105.41 99.0599 0)
+		(property "Reference" "J18"
+			(at 106.68 146.0501 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1326,7 +1327,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 105.41 101.5999 0)
+			(at 106.68 143.5101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1335,7 +1336,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 104.14 100.33 0)
+			(at 105.41 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1344,7 +1345,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 104.14 100.33 0)
+			(at 105.41 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1353,7 +1354,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 104.14 100.33 0)
+			(at 105.41 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1373,7 +1374,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/61b8f38e-6730-4fc5-8ab9-627730f56fd6"
-					(reference "J20")
+					(reference "J18")
 					(unit 1)
 				)
 			)
@@ -1390,7 +1391,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0081e77-9ce8-43a3-9094-c37834e038f4")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR019"
 			(at 102.87 115.57 0)
 			(effects
 				(font
@@ -1441,7 +1442,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/61b8f38e-6730-4fc5-8ab9-627730f56fd6"
-					(reference "#PWR024")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)

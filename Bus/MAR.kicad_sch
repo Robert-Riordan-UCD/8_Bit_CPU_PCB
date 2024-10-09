@@ -809,7 +809,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 78.74) (xy 100.33 78.74)
+			(xy 99.06 83.82) (xy 100.33 83.82)
 		)
 		(stroke
 			(width 0)
@@ -849,7 +849,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 83.82) (xy 100.33 83.82)
+			(xy 99.06 78.74) (xy 100.33 78.74)
 		)
 		(stroke
 			(width 0)
@@ -883,7 +883,7 @@
 	)
 	(hierarchical_label "~{EN}"
 		(shape input)
-		(at 99.06 83.82 180)
+		(at 99.06 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -895,7 +895,7 @@
 	)
 	(hierarchical_label "CLK"
 		(shape input)
-		(at 99.06 78.74 180)
+		(at 99.06 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -951,7 +951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43abe49f-a072-4228-9761-d5d5a65060b8")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR018"
 			(at 88.9 69.85 0)
 			(effects
 				(font
@@ -1001,7 +1001,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/119f76b4-6f05-4dbd-b43d-328ecfc5c099"
-					(reference "#PWR021")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -1018,7 +1018,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99fbab72-a510-468e-b3a4-d02cea821f52")
-		(property "Reference" "J16"
+		(property "Reference" "J15"
 			(at 106.68 67.3101 0)
 			(effects
 				(font
@@ -1084,7 +1084,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/119f76b4-6f05-4dbd-b43d-328ecfc5c099"
-					(reference "J16")
+					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -1092,7 +1092,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 105.41 81.28 180)
+		(at 105.41 81.28 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1100,8 +1101,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3438396-bc85-460a-99c8-4c522e74d181")
-		(property "Reference" "J17"
-			(at 106.68 80.0099 0)
+		(property "Reference" "J16"
+			(at 106.68 82.5501 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1110,7 +1111,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 106.68 82.5499 0)
+			(at 106.68 80.0101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1157,7 +1158,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/119f76b4-6f05-4dbd-b43d-328ecfc5c099"
-					(reference "J17")
+					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -1173,7 +1174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0bc3d15-4157-403d-b1a7-7cffa7393219")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR017"
 			(at 88.9 62.23 0)
 			(effects
 				(font
@@ -1223,7 +1224,7 @@
 		(instances
 			(project "bus"
 				(path "/37ae8b13-e183-404e-b70a-681e1af60f55/119f76b4-6f05-4dbd-b43d-328ecfc5c099"
-					(reference "#PWR020")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
