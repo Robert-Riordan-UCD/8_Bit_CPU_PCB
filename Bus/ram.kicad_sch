@@ -1131,7 +1131,7 @@
 		)
 		(uuid "d48df9e6-ba58-48ff-8c14-2684107b6c4e")
 	)
-	(hierarchical_label "~{RO}"
+	(hierarchical_label "~{WO}"
 		(shape input)
 		(at 100.33 142.24 180)
 		(fields_autoplaced yes)
