@@ -3435,6 +3435,17 @@
 		)
 		(uuid "ba6f9145-29d4-4f20-ad3d-b90fbbf36517")
 	)
+	(label "~{CLK}"
+		(at 231.14 137.16 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "badc41b5-aa27-4082-a105-b7dba3e57cda")
+	)
 	(label "B0"
 		(at 60.96 83.82 0)
 		(fields_autoplaced yes)
@@ -6377,8 +6388,8 @@
 		)
 	)
 	(sheet
-		(at 231.14 137.16)
-		(size 27.94 12.7)
+		(at 228.6 137.16)
+		(size 30.48 12.7)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -6389,7 +6400,7 @@
 		)
 		(uuid "662d6a90-2c83-4a1e-be16-f45c39c56db0")
 		(property "Sheetname" "Spare"
-			(at 230.4284 149.86 90)
+			(at 227.8884 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6505,6 +6516,16 @@
 				(justify right)
 			)
 			(uuid "042fc5b8-b60c-463c-9fdf-3e51641576a6")
+		)
+		(pin "~{CLK}" input
+			(at 231.14 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "deb169ca-23d4-47e2-ba39-0a7c6b36c960")
 		)
 		(instances
 			(project "bus"
