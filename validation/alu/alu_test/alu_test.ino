@@ -23,7 +23,7 @@
  *  a) Check flags are cleared on reset
  */
 
-#define CLK_HALF_PERIOD_MS 10
+#define CLK_HALF_PERIOD_MS 100
 
 #define BUS_SIZE 8
 
@@ -110,6 +110,46 @@ void load_B(uint8_t value) {
   }
 }
 
+/* Test functions */
+bool test_a_pass_through() {
+  bool pass = true;
+
+  load_A(0);
+  load_B(0);
+  digitalWrite(WRITE_N, LOW);
+  
+  pass &= test_equal(read_bus(), 0, "A Pass through");
+
+  for (int i=0; i<BUS_SIZE; i++) {
+    load_A(1<<i);
+    pass &= test_equal(read_bus(), 1<<i, "A Pass through");
+  }
+
+  digitalWrite(WRITE_N, HIGH);
+
+  return pass;
+}
+
+bool test_b_pass_through() {
+  bool pass = true;
+
+  load_A(0);
+  load_B(0);
+  digitalWrite(WRITE_N, LOW);
+  
+  pass &= test_equal(read_bus(), 0, "B Pass through");
+
+  for (int i=0; i<BUS_SIZE; i++) {
+    load_B(1<<i);
+    pass &= test_equal(read_bus(), 1<<i, "B Pass through");
+  }
+
+  digitalWrite(WRITE_N, HIGH);
+
+  return pass;
+}
+
+/* Main program */
 void setup() {
   Serial.begin(9600);
 
@@ -128,6 +168,16 @@ void setup() {
   }
 
   /* Tests */
+  bool a_pass_through = test_a_pass_through();
+  bool b_pass_through = test_b_pass_through();
+
+  Serial.println();
+
+  Serial.print("A pass through:\t");
+  Serial.println(a_pass_through ? "PASS" : "FAIL");
+
+  Serial.print("B pass through:\t");
+  Serial.println(b_pass_through ? "PASS" : "FAIL");
 }
 
 void loop() {}
