@@ -283,6 +283,33 @@ bool test_carry() {
   return pass;
 }
 
+bool test_reset() {
+  bool pass = true;
+
+  load_A(255);
+  load_B(1);
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), true, "Reset setup. Carry flag set");
+  pass &= test_equal(digitalRead(ZERO), true, "Reset setup. Zero flag set");
+
+  reset();
+  
+  pass &= test_equal(digitalRead(CARRY), false, "Reset setup. Carry flag unset");
+  pass &= test_equal(digitalRead(ZERO), false, "Reset setup. Zero flag unset");
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), true, "Reset setup. Carry flag set again");
+  pass &= test_equal(digitalRead(ZERO), true, "Reset setup. Zero flag set again");
+
+  reset();
+  
+  pass &= test_equal(digitalRead(CARRY), false, "Reset setup. Carry flag unset");
+  pass &= test_equal(digitalRead(ZERO), false, "Reset setup. Zero flag unset");
+
+  return pass;
+}
+
 /* Main program */
 void setup() {
   Serial.begin(9600);
@@ -345,6 +372,10 @@ void setup() {
   Serial.print("Carry flag:\t\t\t");
   bool carry = test_carry();
   Serial.println(carry ? "PASS" : "FAIL");
+
+  Serial.print("Flag reset:\t\t\t");
+  bool reset = test_reset();
+  Serial.println(reset ? "PASS" : "FAIL");
 }
 
 void loop() {}
