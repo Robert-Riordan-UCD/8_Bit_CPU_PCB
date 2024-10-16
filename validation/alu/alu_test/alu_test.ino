@@ -45,6 +45,10 @@ void print_bin8(int n) {
   }
 }
 
+uint8_t twos_comp(uint8_t value) {
+  return (value^0xFF)+1;
+}
+
 bool test_equal(int value, int expected, char* test) {
   if (value == expected) {
     Serial.print("Pass  (");
@@ -118,11 +122,11 @@ bool test_a_pass_through() {
   load_B(0);
   digitalWrite(WRITE_N, LOW);
   
-  pass &= test_equal(read_bus(), 0, "A Pass through");
+  pass &= test_equal(read_bus(), 0, "A pass through");
 
   for (int i=0; i<BUS_SIZE; i++) {
     load_A(1<<i);
-    pass &= test_equal(read_bus(), 1<<i, "A Pass through");
+    pass &= test_equal(read_bus(), 1<<i, "A pass through");
   }
 
   digitalWrite(WRITE_N, HIGH);
@@ -137,11 +141,31 @@ bool test_b_pass_through() {
   load_B(0);
   digitalWrite(WRITE_N, LOW);
   
-  pass &= test_equal(read_bus(), 0, "B Pass through");
+  pass &= test_equal(read_bus(), 0, "B pass through");
 
   for (int i=0; i<BUS_SIZE; i++) {
     load_B(1<<i);
-    pass &= test_equal(read_bus(), 1<<i, "B Pass through");
+    pass &= test_equal(read_bus(), 1<<i, "B pass through");
+  }
+
+  digitalWrite(WRITE_N, HIGH);
+
+  return pass;
+}
+
+bool test_b_comp_pass_through() {
+  bool pass = true;
+
+  load_A(0);
+  load_B(0);
+  digitalWrite(WRITE_N, LOW);
+  digitalWrite(SUB, HIGH);
+  
+  pass &= test_equal(read_bus(), twos_comp(0), "2's comp pass through");
+
+  for (int i=0; i<BUS_SIZE; i++) {
+    load_B(1<<i);
+    pass &= test_equal(read_bus(), twos_comp(1<<i), "2's comp pass through");
   }
 
   digitalWrite(WRITE_N, HIGH);
@@ -170,14 +194,18 @@ void setup() {
   /* Tests */
   bool a_pass_through = test_a_pass_through();
   bool b_pass_through = test_b_pass_through();
+  bool b_comp_pass_through = test_b_comp_pass_through();
 
   Serial.println();
 
-  Serial.print("A pass through:\t");
+  Serial.print("A pass through:\t\t");
   Serial.println(a_pass_through ? "PASS" : "FAIL");
 
-  Serial.print("B pass through:\t");
+  Serial.print("B pass through:\t\t");
   Serial.println(b_pass_through ? "PASS" : "FAIL");
+  
+  Serial.print("B 2's comp pass through:\t");
+  Serial.println(b_comp_pass_through ? "PASS" : "FAIL");
 }
 
 void loop() {}
