@@ -22,6 +22,7 @@
  * 8) Flags reset
  *  a) Check flags are cleared on reset
  */
+#define DEBUG false
 
 #define CLK_HALF_PERIOD_MS 100
 
@@ -51,31 +52,20 @@ uint8_t twos_comp(uint8_t value) {
 }
 
 bool test_equal(int value, int expected, char* test) {
+  char print_buffer[200];
   if (value == expected) {
-    Serial.print("Pass  (");
-    Serial.print(test);
-    Serial.print("): Expected ");
-    Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
-    Serial.print(" - Actual ");
-    Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
-    Serial.println();
+    if (DEBUG) {
+//      print_bin8(expected);
+//      print_bin8(value);
+      sprintf(print_buffer, "PASS (%s): Expected %03d - Actual %03d", test, expected, value);
+      Serial.println(print_buffer);
+    }
     return true;
   } else {
-    Serial.print("ERROR (");
-    Serial.print(test);
-    Serial.print("): Expected ");
-    Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
-    Serial.print(" - Actual ");
-    Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
-    Serial.println();
+    sprintf(print_buffer, "ERROR (%s): Expected %03d - Actual %03d", test, expected, value);
+    Serial.println(print_buffer);
+//    print_bin8(expected);
+//    print_bin8(value);
     return false;
   }
 }
@@ -198,6 +188,29 @@ bool test_bus_float() {
   return pass;
 }
 
+float test_add() {
+  reset();
+  digitalWrite(WRITE_N, LOW);
+  float pass_count = 0;
+
+  float test = 0;
+  uint16_t result = ((uint16_t)test&0xFF) + ((uint16_t)test>>8);
+  char print_buffer[16];
+
+  do {
+    load_A((uint16_t)test&0xFF);
+    load_B((uint16_t)test>>8);
+    result = ((uint16_t)(test)&0xFF) + ((uint16_t)test>>8);
+    sprintf(print_buffer, "Add %03d + %03d", (uint16_t)test&0xFF, (uint16_t)test>>8);
+    pass_count += test_equal(read_bus(), result%256, print_buffer);
+    test++;
+  } while (test < 0x10000);
+  
+  digitalWrite(WRITE_N, HIGH);
+  
+  return pass_count;
+}
+
 /* Main program */
 void setup() {
   Serial.begin(9600);
@@ -217,24 +230,32 @@ void setup() {
   }
 
   /* Tests */
-  bool a_pass_through = test_a_pass_through();
-  bool b_pass_through = test_b_pass_through();
-  bool b_comp_pass_through = test_b_comp_pass_through();
-  bool bus_float = test_bus_float();
-
   Serial.println();
 
   Serial.print("A pass through:\t\t\t");
+  bool a_pass_through = test_a_pass_through();
   Serial.println(a_pass_through ? "PASS" : "FAIL");
 
   Serial.print("B pass through:\t\t\t");
+  bool b_pass_through = test_b_pass_through();
   Serial.println(b_pass_through ? "PASS" : "FAIL");
   
   Serial.print("B 2's comp pass through:\t");
+  bool b_comp_pass_through = test_b_comp_pass_through();
   Serial.println(b_comp_pass_through ? "PASS" : "FAIL");
   
   Serial.print("Bus floating:\t\t\t");
+  bool bus_float = test_bus_float();
   Serial.println(bus_float ? "PASS" : "FAIL");
+  
+  Serial.print("Add:\t\t\t\t");
+  float add = test_add();
+  Serial.print(add >= pow(2, 2*BUS_SIZE) ? "PASS" : "FAIL");
+  Serial.print("\t(Passed ");
+  Serial.print(add);
+  Serial.print("/");
+  Serial.print(pow(2, 2*BUS_SIZE));
+  Serial.println(")");
 }
 
 void loop() {}
