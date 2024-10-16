@@ -2,6 +2,7 @@
  *
  * 1) Read in
  *  a) Internal state should update
+ *    i) Instruction register only has 4 bits of readable internal state
  *  b) Bus should be floating
  * 2) Write out
  *  a) Bus should match value writen earlier
@@ -16,15 +17,15 @@
 #define CLK_HALF_PERIOD_MS 10
 
 #define BUS_SIZE 8
-#define BUS_FLOATING 0xFF
+#define INTERNAL_BUS_SIZE 4
 
 #define WO_N 5
 #define RST 4
 #define RI_N 3
 #define CLK 2
 
-int BUS[BUS_SIZE] = {13, 12, 11, 10, 9, 8, 7, 6};
-int INTERNAL_STATE[BUS_SIZE] = {22, 24, 26, 28, 30, 32, 34, 36};
+int BUS[BUS_SIZE] = {36, 34, 32, 30, 28, 26, 24, 22};
+int INTERNAL_STATE[INTERNAL_BUS_SIZE] = {9, 8, 7, 6};
 
 /* Basic utility functions */
 void print_bin8(int n) {
@@ -105,11 +106,11 @@ uint8_t read_bus() {
 uint8_t read_internal_state() {
   uint8_t internal_state=0;
 
-  for (int i=BUS_SIZE-1; i>=0; i--) {
+  for (int i=INTERNAL_BUS_SIZE-1; i>=0; i--) {
     internal_state += digitalRead(INTERNAL_STATE[i]) << i;
   }
 
-  return internal_state;
+  return internal_state<<(BUS_SIZE-INTERNAL_BUS_SIZE);
 }
 
 // Get the value from the register on to the bus
@@ -130,19 +131,7 @@ bool test_read_in() {
   bool pass = true;
 
   read_in(0b00000000);
-  pass &= test_equal(read_internal_state(), 0b00000000, "Read in");
-
-  read_in(0b00000001);
-  pass &= test_equal(read_internal_state(), 0b00000001, "Read in");
-
-  read_in(0b00000010);
-  pass &= test_equal(read_internal_state(), 0b00000010, "Read in");
-
-  read_in(0b00000100);
-  pass &= test_equal(read_internal_state(), 0b00000100, "Read in");
-
-  read_in(0b00001000);
-  pass &= test_equal(read_internal_state(), 0b00001000, "Read in");
+  pass &= test_equal(read_internal_state(), 0b0000, "Read in");
 
   read_in(0b00010000);
   pass &= test_equal(read_internal_state(), 0b00010000, "Read in");
@@ -156,8 +145,8 @@ bool test_read_in() {
   read_in(0b10000000);
   pass &= test_equal(read_internal_state(), 0b10000000, "Read in");
 
-  read_in(0b11111111);
-  pass &= test_equal(read_internal_state(), 0b11111111, "Read in");
+  read_in(0b11110000);
+  pass &= test_equal(read_internal_state(), 0b11110000, "Read in");
 
   return pass;
 }
@@ -179,7 +168,7 @@ bool test_reset() {
 
   read_in(0b10101010);
 
-  pass &= test_equal(read_internal_state(), 0b10101010, "Reset test setup");
+  pass &= test_equal(read_internal_state(), 0b10100000, "Reset test setup");
   reset();
   pass &= test_equal(read_internal_state(), 0, "Reset test");
   return pass;
@@ -192,7 +181,7 @@ bool test_noop() {
   read_in(0b10101010);
 
   for (int i = 0; i < 5; i++) {
-    pass &= test_equal(read_internal_state(), 0b10101010, "No OP");
+    pass &= test_equal(read_internal_state(), 0b10100000, "No OP");
     clock_pulse();
   }
   return pass;
