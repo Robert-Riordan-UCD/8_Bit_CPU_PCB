@@ -14,7 +14,7 @@
  * 5) Add
  *  a) Check every value of A and B can be added correctly
  *  b) Check flags are set correctly
- * 6) Add
+ * 6) Subtract
  *  a) Check every value of A and B can be subtracted correctly
  *  b) Check flags are set correctly
  * 7) Flags
@@ -211,6 +211,31 @@ float test_add() {
   return pass_count;
 }
 
+float test_sub() {
+  reset();
+  digitalWrite(WRITE_N, LOW);
+  digitalWrite(SUB, HIGH);
+  float pass_count = 0;
+
+  float test = 0;
+  uint16_t result = ((uint16_t)test&0xFF) + ((uint16_t)test>>8);
+  char print_buffer[16];
+
+  do {
+    load_A((uint16_t)test&0xFF);
+    load_B((uint16_t)test>>8);
+    result = ((uint16_t)(test)&0xFF) + twos_comp(((uint16_t)test>>8));
+    sprintf(print_buffer, "Subtract %03d - %03d", (uint16_t)test&0xFF, (uint16_t)test>>8);
+    pass_count += test_equal(read_bus(), result%256, print_buffer);
+    test++;
+  } while (test < 0x10000);
+  
+  digitalWrite(WRITE_N, HIGH);
+  digitalWrite(SUB, LOW);
+  
+  return pass_count;
+}
+
 /* Main program */
 void setup() {
   Serial.begin(9600);
@@ -253,6 +278,15 @@ void setup() {
   Serial.print(add >= pow(2, 2*BUS_SIZE) ? "PASS" : "FAIL");
   Serial.print("\t(Passed ");
   Serial.print(add);
+  Serial.print("/");
+  Serial.print(pow(2, 2*BUS_SIZE));
+  Serial.println(")");
+
+  Serial.print("Subtract:\t\t\t");
+  float sub = test_sub();
+  Serial.print(sub >= pow(2, 2*BUS_SIZE) ? "PASS" : "FAIL");
+  Serial.print("\t(Passed ");
+  Serial.print(sub);
   Serial.print("/");
   Serial.print(pow(2, 2*BUS_SIZE));
   Serial.println(")");
