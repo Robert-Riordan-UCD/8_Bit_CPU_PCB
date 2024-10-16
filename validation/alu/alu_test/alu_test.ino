@@ -24,7 +24,7 @@
  */
 #define DEBUG false
 
-#define CLK_HALF_PERIOD_MS 100
+#define CLK_HALF_PERIOD_MS 10
 
 #define BUS_SIZE 8
 #define BUS_FLOATING 0xFF
@@ -41,12 +41,6 @@ const int A_REG[BUS_SIZE] = {39, 41, 43, 45, 47, 49, 51, 53};
 const int B_REG[BUS_SIZE] = {38, 40, 42, 44, 46, 48, 50, 52};
 
 /* Basic utility functions */
-void print_bin8(int n) {
-  for(int i = 7; i >= 0; i--) {
-    Serial.print((n>>i)&1);
-  }
-}
-
 uint8_t twos_comp(uint8_t value) {
   return (value^0xFF)+1;
 }
@@ -236,6 +230,59 @@ float test_sub() {
   return pass_count;
 }
 
+bool test_zero() {
+  bool pass = true;
+
+  load_A(0);
+  load_B(0);
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(ZERO), true, "Zero flag set");
+
+  load_A(1);
+  pass &= test_equal(digitalRead(ZERO), true, "Zero flag still set");
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(ZERO), false, "Zero flag unset");
+
+  load_A(0);
+  pass &= test_equal(digitalRead(ZERO), false, "Zero flag still unset");
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(ZERO), true, "Zero flag set");
+    
+  return pass;
+}
+
+bool test_carry() {
+  bool pass = true;
+
+  load_A(0);
+  load_B(0);
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), false, "Carry flag unset");
+
+  load_A(255);
+  load_B(255);
+  pass &= test_equal(digitalRead(CARRY), false, "Carry flag still unset");
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), true, "Carry flag set");
+
+  load_B(0);
+  pass &= test_equal(digitalRead(CARRY), true, "Carry flag still set");
+
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), false, "Carry flag unset");
+
+  load_B(1);
+  clock_pulse();
+  pass &= test_equal(digitalRead(CARRY), true, "Carry flag set");
+      
+  return pass;
+}
+
 /* Main program */
 void setup() {
   Serial.begin(9600);
@@ -290,6 +337,14 @@ void setup() {
   Serial.print("/");
   Serial.print(pow(2, 2*BUS_SIZE));
   Serial.println(")");
+
+  Serial.print("Zero flag:\t\t\t");
+  bool zero = test_zero();
+  Serial.println(zero ? "PASS" : "FAIL");
+
+  Serial.print("Carry flag:\t\t\t");
+  bool carry = test_carry();
+  Serial.println(carry ? "PASS" : "FAIL");
 }
 
 void loop() {}
