@@ -26,6 +26,7 @@
 #define CLK_HALF_PERIOD_MS 100
 
 #define BUS_SIZE 8
+#define BUS_FLOATING 0xFF
 
 #define WRITE_N 22
 #define SUB 24
@@ -169,7 +170,31 @@ bool test_b_comp_pass_through() {
   }
 
   digitalWrite(WRITE_N, HIGH);
+  digitalWrite(SUB, LOW);
 
+  return pass;
+}
+
+bool test_bus_float() {
+  bool pass = true;
+  
+  load_A(0);
+  load_B(0);
+  digitalWrite(WRITE_N, HIGH);
+  
+  pass &= test_equal(read_bus(), BUS_FLOATING, "Bus floating");
+  digitalWrite(WRITE_N, LOW);
+  pass &= test_equal(read_bus(), 0, "Bus not floating");
+  digitalWrite(WRITE_N, HIGH);
+
+  for (int i=0; i<BUS_SIZE; i++) {
+    load_A(1<<i);
+    pass &= test_equal(read_bus(), BUS_FLOATING, "Bus floating");
+    digitalWrite(WRITE_N, LOW);
+    pass &= test_equal(read_bus(), 1<<i, "Bus not floating");
+    digitalWrite(WRITE_N, HIGH);
+  }
+  
   return pass;
 }
 
@@ -195,17 +220,21 @@ void setup() {
   bool a_pass_through = test_a_pass_through();
   bool b_pass_through = test_b_pass_through();
   bool b_comp_pass_through = test_b_comp_pass_through();
+  bool bus_float = test_bus_float();
 
   Serial.println();
 
-  Serial.print("A pass through:\t\t");
+  Serial.print("A pass through:\t\t\t");
   Serial.println(a_pass_through ? "PASS" : "FAIL");
 
-  Serial.print("B pass through:\t\t");
+  Serial.print("B pass through:\t\t\t");
   Serial.println(b_pass_through ? "PASS" : "FAIL");
   
   Serial.print("B 2's comp pass through:\t");
   Serial.println(b_comp_pass_through ? "PASS" : "FAIL");
+  
+  Serial.print("Bus floating:\t\t\t");
+  Serial.println(bus_float ? "PASS" : "FAIL");
 }
 
 void loop() {}
