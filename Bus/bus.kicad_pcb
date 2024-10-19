@@ -1362,7 +1362,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b14a3a33-b54f-4e6f-8769-e574e6a595eb")
@@ -1374,7 +1374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4c6be5d-e8a9-4a2b-a109-d67685d995bf")
@@ -1386,7 +1386,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3437c663-dada-43bc-87d1-bf349937b2f9")
@@ -1685,7 +1685,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8050b775-af0c-4fd1-804e-46d0b181fa5c")
@@ -1697,7 +1697,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8fb8dfa2-92e3-47f0-91fc-bc948b38a96a")
@@ -1709,7 +1709,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b0675db7-d609-4d18-bf63-3f536c70bb10")
@@ -2008,7 +2008,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "51feeb70-c362-422d-ad7e-47048733987c")
@@ -2020,7 +2020,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f2b94872-e896-4d03-85ae-533351d69cc1")
@@ -2032,7 +2032,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9bd0e712-00e5-40e7-bbe7-2eeeab589042")
@@ -4911,7 +4911,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e54421b5-7ce8-409b-bf7b-ace3dcd9681e")
@@ -4923,7 +4923,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0ff839a3-8b47-418e-a8a9-b716a0403ca5")
@@ -4935,7 +4935,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f33f3a03-79f4-4c4f-9235-3695eead2a37")
@@ -5524,7 +5524,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7ee749e-387b-4f07-af75-fc4f927facec")
@@ -5536,7 +5536,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0713a270-8bda-450a-9ca5-aa0d52634dfc")
@@ -5548,7 +5548,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7ffa6a5f-8777-41a5-8390-a8cc51697ff5")
@@ -5847,7 +5847,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "22a3b733-1c07-4f02-b937-eb4c5dbaeab7")
@@ -5859,7 +5859,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "78345d48-bb12-43a9-9d66-95603531a3c9")
@@ -5871,7 +5871,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb187273-9775-42cb-8535-e4978671dd10")
@@ -10468,7 +10468,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "151cbf36-b60d-4291-b3ac-570b4221f404")
@@ -10480,7 +10480,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd8d41b5-75c4-4c74-8e69-2eca085bb927")
@@ -10492,7 +10492,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f85c0e65-b811-4f18-89cc-8d3e3b24f3eb")
@@ -12360,7 +12360,7 @@
 			)
 		)
 		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dbcb99cf-94fd-48ae-b6db-d6aa52528dbb")
@@ -12372,7 +12372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c67fcc2c-56ac-4497-b769-7e4285d7079d")
@@ -12384,7 +12384,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5ba2cd6b-23e1-4eb8-9f38-c4c3b3d89bb7")
@@ -17742,7 +17742,7 @@
 			(justify right bottom)
 		)
 	)
-	(gr_text "Memory\nAccess\nRegister"
+	(gr_text "Memory\nAddress\nRegister"
 		(at 127.508 110.744 0)
 		(layer "F.SilkS")
 		(uuid "c4a66862-8e42-498d-a2b6-ac0a4cabcfa1")
