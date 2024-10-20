@@ -1094,7 +1094,7 @@
 	)
 	(hierarchical_label "B1"
 		(shape bidirectional)
-		(at 68.58 105.41 180)
+		(at 68.58 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1106,7 +1106,7 @@
 	)
 	(hierarchical_label "B5"
 		(shape bidirectional)
-		(at 68.58 95.25 180)
+		(at 68.58 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1130,7 +1130,7 @@
 	)
 	(hierarchical_label "B2"
 		(shape bidirectional)
-		(at 68.58 102.87 180)
+		(at 68.58 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1142,7 +1142,7 @@
 	)
 	(hierarchical_label "B4"
 		(shape bidirectional)
-		(at 68.58 97.79 180)
+		(at 68.58 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1154,7 +1154,7 @@
 	)
 	(hierarchical_label "B0"
 		(shape bidirectional)
-		(at 68.58 107.95 180)
+		(at 68.58 90.17 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1178,7 +1178,7 @@
 	)
 	(hierarchical_label "B3"
 		(shape bidirectional)
-		(at 68.58 100.33 180)
+		(at 68.58 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1214,7 +1214,7 @@
 	)
 	(hierarchical_label "B6"
 		(shape bidirectional)
-		(at 68.58 92.71 180)
+		(at 68.58 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1226,7 +1226,7 @@
 	)
 	(hierarchical_label "B7"
 		(shape bidirectional)
-		(at 68.58 90.17 180)
+		(at 68.58 107.95 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
