@@ -3960,6 +3960,12 @@
 		(uuid "7228fc02-aebe-4480-8f3f-c82ae2a23185")
 	)
 	(junction
+		(at 71.12 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "728999e5-1603-4d61-9290-95bd475942cd")
+	)
+	(junction
 		(at 210.82 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4965,7 +4971,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 123.19) (xy 77.47 123.19)
+			(xy 63.5 123.19) (xy 71.12 123.19)
 		)
 		(stroke
 			(width 0)
@@ -5522,6 +5528,16 @@
 			(type default)
 		)
 		(uuid "e409d680-7e92-4810-87fd-8f89e1ecf516")
+	)
+	(wire
+		(pts
+			(xy 71.12 123.19) (xy 77.47 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7ed050b-8b59-481a-95c4-b2f9ddd12634")
 	)
 	(wire
 		(pts
@@ -10763,6 +10779,73 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
+		(at 71.12 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af668ce0-e005-4573-a849-4849893a13d6")
+		(property "Reference" "#PWR033"
+			(at 71.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 71.12 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 71.12 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ff02258-a35a-4ead-8e1d-7f69bf14877d")
+		)
+		(instances
+			(project ""
+				(path "/5d332551-33f6-4491-a826-882274bc7f5d"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
 		(at 50.8 127 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11173,6 +11256,76 @@
 			(project "RAM"
 				(path "/5d332551-33f6-4491-a826-882274bc7f5d"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 119.38 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9aada0e-f726-4ba9-87f7-33c19ce6f055")
+		(property "Reference" "R20"
+			(at 72.644 121.158 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 72.644 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
+			(at 69.342 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2f9855ea-b192-4782-a02c-815f06cfafbd")
+		)
+		(pin "1"
+			(uuid "c1580ff1-2408-471f-9caf-a8a2d670fa61")
+		)
+		(instances
+			(project "RAM"
+				(path "/5d332551-33f6-4491-a826-882274bc7f5d"
+					(reference "R20")
 					(unit 1)
 				)
 			)
