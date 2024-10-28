@@ -17,6 +17,7 @@
 *.erc
 fp-info-cache
 */Build/*
+*.step
 
 # Local settings
 *_prl
