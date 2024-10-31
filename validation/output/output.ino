@@ -79,7 +79,7 @@ void test_enable() {
 }
 
 void test_reset() {
-  Serial.println("Rest test running");
+  Serial.println("Reset test running");
   Serial.println("\tDisplay should read 123");
   display(123);
   delay(WAIT_TIME);
@@ -87,6 +87,16 @@ void test_reset() {
   Serial.println("\tDisplay should read 0");
   reset();
   delay(WAIT_TIME);
+}
+
+void test_count_all_two_comp() {
+  Serial.println("Twos complement test running");
+  Serial.println("\tDisplay should begin at 0, count to 127, then count from -128 to -1");
+  digitalWrite(TWO_COMP, HIGH);
+  for (int i=0; i<pow(2, BUS_SIZE); i++) {
+    display(i);
+    delay(WAIT_TIME);
+  }
 }
 
 void setup() {
@@ -113,6 +123,7 @@ void setup() {
   test_count_all();
   test_enable();
   test_reset();
+  test_count_all_two_comp();
 }
 
 void loop() {}
