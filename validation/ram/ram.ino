@@ -11,6 +11,7 @@
 #define CLK_HALF_PERIOD_MS 20
 
 #define BUS_SIZE 8
+#define BUS_FLOATING 0xFF
 #define ADDR_SIZE 4
 
 #define PROG 22
@@ -110,7 +111,7 @@ void clear_ram() {
 }
 
 /* Test functions */
-int write_read_all_addr_test() {
+int test_write_read_all_addr() {
   clear_ram();
   int pass_count = 0;
 
@@ -135,6 +136,21 @@ int write_read_all_addr_test() {
   return pass_count;
 }
 
+bool test_noop() {
+  clear_ram();
+  bool pass = true;
+
+  write_to_ram(0b10101010, 0);
+  pass &= test_equal(read_from_ram(0), 0b10101010, "No OP setup");
+
+  for (int i = 0; i < 5; i++) {
+    pass &= test_equal(read_from_ram(0), 0b10101010, "No OP");
+    clock_pulse();
+  }
+
+  return pass;
+}
+
 void setup() {
   Serial.begin(9600);
 
@@ -155,13 +171,18 @@ void setup() {
   }
 
   /* Tests */
-  int write_read_all_addr = write_read_all_addr_test();
+  int write_read_all_addr = test_write_read_all_addr();
+  bool noop = test_noop();
+  
   Serial.print("Write/Read all addr:\t");
   Serial.print(write_read_all_addr >= 2*pow(2, ADDR_SIZE) ? "PASS" : "FAIL");
   Serial.print("\t(Passed ");
   Serial.print(write_read_all_addr);
   Serial.println("/32)");
   Serial.println();
+  
+  Serial.print("No OP:\t\t");
+  Serial.println(noop ? "PASS" : "FAIL");
 }
 
 void loop() {}
