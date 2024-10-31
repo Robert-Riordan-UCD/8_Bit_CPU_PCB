@@ -162,6 +162,26 @@ int test_read_in_write_out_all() {
   return pass_count;
 }
 
+bool test_program_mode() {
+  clear_ram();
+  bool pass = true;
+  digitalWrite(PROG, LOW);
+
+  write_to_ram(0b10101010, 0);
+
+  for (int i = 0; i < 5; i++) {
+    pass &= test_equal(read_from_ram(0), 0, "No write in program mode");
+    clock_pulse();
+  }
+  
+  digitalWrite(PROG, HIGH);
+
+  write_to_ram(0b10101010, 0);
+  pass &= test_equal(read_from_ram(0), 0b10101010, "No write in program mode");
+    
+  return pass;
+}
+
 void setup() {
   Serial.begin(9600);
 
@@ -185,6 +205,7 @@ void setup() {
   int write_read_all_addr = test_write_read_all_addr();
   bool noop = test_noop();
   int read_in_write_out_all = test_read_in_write_out_all();
+  bool program_mode = test_program_mode();
 
   Serial.println();
   Serial.print("Write/Read all addr:\t");
@@ -193,14 +214,17 @@ void setup() {
   Serial.print(write_read_all_addr);
   Serial.println("/32)");
   
-  Serial.print("No OP:\t\t");
+  Serial.print("No OP:\t\t\t");
   Serial.println(noop ? "PASS" : "FAIL");
 
-  Serial.print("Read/Write:\t");
+  Serial.print("Read/Write:\t\t");
   Serial.print(read_in_write_out_all >= pow(2, BUS_SIZE) ? "PASS" : "FAIL");
   Serial.print("\t(Passed ");
   Serial.print(read_in_write_out_all);
   Serial.println("/256)");
+  
+  Serial.print("Program mode:\t\t");
+  Serial.println(program_mode ? "PASS" : "FAIL");
 }
 
 void loop() {}
