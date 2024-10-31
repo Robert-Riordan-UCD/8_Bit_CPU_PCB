@@ -8,7 +8,7 @@
  * 5) Unable to write while PROG is asserted
  */
 
-#define CLK_HALF_PERIOD_MS 10
+#define CLK_HALF_PERIOD_MS 20
 
 #define BUS_SIZE 8
 #define ADDR_SIZE 4
@@ -85,7 +85,7 @@ void write_to_ram(uint8_t value, uint8_t addr) {
   }
 }
 
-// Get the value from the register on to the bus
+// Get the value from RAM on to the bus
 uint8_t read_from_ram(uint8_t addr) {
   uint8_t bus = 0;
   
@@ -94,15 +94,46 @@ uint8_t read_from_ram(uint8_t addr) {
   }
   
   digitalWrite(RO_N, LOW);
+  delay(1);
   for (int i=0; i<BUS_SIZE; i++) {
     bus += digitalRead(BUS[i])<<i;
-  }
-  
+  }  
+  delay(1);
   digitalWrite(RO_N, HIGH);
   return bus;
 }
 
+void clear_ram() {
+  for (int i=0; i<pow(2, ADDR_SIZE); i++) {
+    write_to_ram(0, i);
+  }
+}
+
 /* Test functions */
+int write_read_all_addr_test() {
+  clear_ram();
+  int pass_count = 0;
+
+  /* Write address value to each address */
+  for (int i=0; i<pow(2, ADDR_SIZE); i++) {
+    write_to_ram(i, i);
+  }
+
+  for (int i=0; i<pow(2, ADDR_SIZE); i++) {
+    pass_count += test_equal(read_from_ram(i), i, "Write/Read all addr");
+  }
+
+  /* Write address value to each address */
+  for (int i=0; i<pow(2, ADDR_SIZE); i++) {
+    write_to_ram(i<<ADDR_SIZE, i);
+  }
+
+  for (int i=0; i<pow(2, ADDR_SIZE); i++) {
+    pass_count += test_equal(read_from_ram(i), i<<ADDR_SIZE, "Write/Read all addr");
+  }
+
+  return pass_count;
+}
 
 void setup() {
   Serial.begin(9600);
@@ -124,8 +155,13 @@ void setup() {
   }
 
   /* Tests */
-  write_to_ram(0b11110000, 0);
-  Serial.println(read_from_ram(0));
+  int write_read_all_addr = write_read_all_addr_test();
+  Serial.print("Write/Read all addr:\t");
+  Serial.print(write_read_all_addr >= 2*pow(2, ADDR_SIZE) ? "PASS" : "FAIL");
+  Serial.print("\t(Passed ");
+  Serial.print(write_read_all_addr);
+  Serial.println("/32)");
+  Serial.println();
 }
 
 void loop() {}
