@@ -9,6 +9,7 @@
  */
 
 #define CLK_HALF_PERIOD_MS 10
+#define WAIT_TIME 250
 
 #define BUS_SIZE 8
 
@@ -23,36 +24,6 @@ int BUS[BUS_SIZE] = {6, 7, 8, 9, 10, 11, 12, 13};
 void print_bin8(int n) {
   for(int i = 7; i >= 0; i--) {
     Serial.print((n>>i)&1);
-  }
-}
-
-bool test_equal(int value, int expected, char* test) {
-  if (value == expected) {
-    Serial.print("Pass  (");
-    Serial.print(test);
-    Serial.print("): Expected ");
-    Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
-    Serial.print(" - Actual ");
-    Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
-    Serial.println();
-    return true;
-  } else {
-    Serial.print("ERROR (");
-    Serial.print(test);
-    Serial.print("): Expected ");
-    Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
-    Serial.print(" - Actual ");
-    Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
-    Serial.println();
-    return false;
   }
 }
 
@@ -82,6 +53,14 @@ void display(int value) {
 }
 
 /* Test functions */
+void test_count_all() {
+  Serial.println("Count all test running");
+  Serial.println("\tDisplay should begin at 0 and count to 255");
+  for (int i=0; i<pow(2, BUS_SIZE); i++) {
+    display(i);
+    delay(WAIT_TIME);
+  }
+}
 
 void setup() {
   Serial.begin(9600);
@@ -104,7 +83,7 @@ void setup() {
   reset();
 
   /* Tests */
-  display(123);
+  test_count_all();
 }
 
 void loop() {}
