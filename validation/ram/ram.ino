@@ -7,6 +7,7 @@
  * 4) Test write then read for every value 0x00 to 0xFF
  * 5) Unable to write while PROG is asserted
  */
+#define DEBUG false
 
 #define CLK_HALF_PERIOD_MS 20
 
@@ -31,6 +32,7 @@ void print_bin8(int n) {
 
 bool test_equal(int value, int expected, char* test) {
   if (value == expected) {
+    if (DEBUG == false) {return true;}
     Serial.print("Pass  (");
     Serial.print(test);
     Serial.print("): Expected ");
@@ -46,11 +48,11 @@ bool test_equal(int value, int expected, char* test) {
   } else {
     Serial.print("ERROR (");
     Serial.print(test);
-    Serial.print("): Expected ");
+    Serial.print("): \n\tExpected \t");
     Serial.print(expected);
     Serial.print(" 0b");
     print_bin8(expected);
-    Serial.print(" - Actual ");
+    Serial.print(" - \n\tActual \t\t");
     Serial.print(value);
     Serial.print(" 0b");
     print_bin8(value);
@@ -137,7 +139,6 @@ int test_write_read_all_addr() {
 }
 
 bool test_noop() {
-  clear_ram();
   bool pass = true;
 
   write_to_ram(0b10101010, 0);
@@ -149,6 +150,16 @@ bool test_noop() {
   }
 
   return pass;
+}
+
+int test_read_in_write_out_all() {
+  int pass_count = 0;
+
+  for (unsigned int i = 0; i < pow(2, BUS_SIZE); i++) {
+    write_to_ram(i, i&0xF);
+    pass_count += test_equal(read_from_ram(i&0xF), i, "Read/Write");
+  }
+  return pass_count;
 }
 
 void setup() {
@@ -173,16 +184,23 @@ void setup() {
   /* Tests */
   int write_read_all_addr = test_write_read_all_addr();
   bool noop = test_noop();
-  
+  int read_in_write_out_all = test_read_in_write_out_all();
+
+  Serial.println();
   Serial.print("Write/Read all addr:\t");
   Serial.print(write_read_all_addr >= 2*pow(2, ADDR_SIZE) ? "PASS" : "FAIL");
   Serial.print("\t(Passed ");
   Serial.print(write_read_all_addr);
   Serial.println("/32)");
-  Serial.println();
   
   Serial.print("No OP:\t\t");
   Serial.println(noop ? "PASS" : "FAIL");
+
+  Serial.print("Read/Write:\t");
+  Serial.print(read_in_write_out_all >= pow(2, BUS_SIZE) ? "PASS" : "FAIL");
+  Serial.print("\t(Passed ");
+  Serial.print(read_in_write_out_all);
+  Serial.println("/256)");
 }
 
 void loop() {}
