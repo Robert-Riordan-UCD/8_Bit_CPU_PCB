@@ -3,12 +3,9 @@
  * 1) Test each instruction
  *  a) Check each step though the microcode cycle
  *  b) Check with all flag states
- * 2) Read from all addresses
- * 3) No-op
- *  a) Intenal state should remain as long as read in is not asserted
- * 4) Test write then read for every value 0x00 to 0xFF
- * 5) Unable to write while PROG is asserted
  */
+#define DEBUG false
+
 #define CLK_HALF_PERIOD_MS 20
 
 // Control output pins
@@ -86,16 +83,19 @@ void print_signals(uint16_t signals) {
 
 bool test_equal(int value, int expected, char* test) {
   if (value == expected) {
+    if (DEBUG == false) {return true;}
     Serial.print("Pass  (");
     Serial.print(test);
     Serial.print("): Expected ");
     Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
+    Serial.print(" (");
+    print_signals(expected);
+    Serial.print(")");
     Serial.print(" - Actual ");
     Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
+    Serial.print(" (");
+    print_signals(value);
+    Serial.print(")");
     Serial.println();
     return true;
   } else {
@@ -103,12 +103,14 @@ bool test_equal(int value, int expected, char* test) {
     Serial.print(test);
     Serial.print("): Expected ");
     Serial.print(expected);
-    Serial.print(" 0b");
-    print_bin8(expected);
+    Serial.print(" (");
+    print_signals(expected);
+    Serial.print(")");
     Serial.print(" - Actual ");
     Serial.print(value);
-    Serial.print(" 0b");
-    print_bin8(value);
+    Serial.print(" (");
+    print_signals(value);
+    Serial.print(")");
     Serial.println();
     return false;
   }
@@ -165,14 +167,30 @@ void set_instruction(uint8_t ins) {
   }
 }
 
+// Get the user to press the reset button to reset the microcode timer
 void reset_timer() {
   Serial.println("Please press reset");
   while(digitalRead(RST) == LOW) {}
   clock_pulse();
   while(digitalRead(RST) == HIGH) {}
-  Serial.println("Done waiting");
 }
+
 /* Test functions */
+int test_ins(uint8_t ins, uint16_t code[6], char *test_name) {
+  int pass = 0;
+  set_instruction(ins);
+  for (uint8_t flags=0; flags<=3; flags++) {
+    digitalWrite(ALU_CARRY, flags>>1);
+    digitalWrite(ALU_ZERO, flags&1);
+    for (int i=0; i<6; i++) {
+      char buf[100];
+      sprintf(buf, "%s (0x%x) T=%d (C=%d,Z=%d)", test_name, ins, i, (flags>>1)&1, flags&1);
+      pass += test_equal(read_control_signals(), code[i], buf);
+      clock_pulse();
+    }
+  }
+  return pass;
+}
 
 void setup() {
   Serial.begin(9600);
@@ -191,11 +209,84 @@ void setup() {
 
   pinMode(RST, INPUT);
 
-  /* Tests */
+  pinMode(I_WO_N, INPUT);
+  pinMode(I_RI_N, INPUT);
+  pinMode(RAM_RI, INPUT);
+  pinMode(RAM_WO_N, INPUT);
+  pinMode(MAR_EN_N, INPUT);
+  pinMode(CLK_HALT, INPUT);
+  pinMode(PC_JMP_N, INPUT);
+  pinMode(PC_EN, INPUT);
+  pinMode(PC_CO_N, INPUT);
+  pinMode(A_WO_N, INPUT);
+  pinMode(A_RI_N, INPUT);
+  pinMode(ALU_WO_N, INPUT);
+  pinMode(ALU_SUB, INPUT);
+  pinMode(ALU_FI, INPUT);
+  pinMode(B_RI_N, INPUT);
+  pinMode(OUT_EN_N, INPUT);
+
   reset_timer();
-  set_instruction(1);
-  uint16_t signals = read_control_signals();
-  print_signals(signals);
+  
+  /* Tests */
+  uint16_t code[][6] = {
+    {MI|PCO, RO|II|PCE, 0, 0, 0, 0}, // No OP
+    {MI|PCO, RO|II|PCE, IO|MI, RO|AI, 0, 0}, // LDA
+    {MI|PCO, RO|II|PCE, IO|MI, RO|BI, ALUO|FI|AI, 0}, // ADD
+    {MI|PCO, RO|II|PCE, IO|MI, RO|BI, ALUO|SUB|FI|AI, 0}, // SUB
+    {MI|PCO, RO|II|PCE, IO|MI, AO|RI, 0, 0}, // STA
+    {MI|PCO, RO|II|PCE, IO|AI, 0, 0, 0}, // LDI
+    {MI|PCO, RO|II|PCE, IO|JMP, 0, 0, 0}, // JMP
+    {MI|PCO, RO|II|PCE, AO|OUT, 0, 0, 0}, // OUT
+    {MI|PCO, RO|II|PCE, HLT, 0, 0, 0} // HALT
+  };
+  int noop = test_ins(0, code[0], "No OP");
+  int lda = test_ins(1, code[1], "Load A");
+  int add = test_ins(2, code[2], "Add");
+  int sub = test_ins(3, code[3], "Subtract");
+  int sta = test_ins(4, code[4], "Store A");
+  int ldi = test_ins(5, code[5], "Load imediate");
+  int jmp = test_ins(6, code[6], "Jump");
+  int out = test_ins(14, code[7], "Output");
+  int hlt = test_ins(15, code[8], "Halt");
+
+  Serial.print("No OP:\t\t");
+  Serial.print(noop);
+  Serial.println("/24");
+
+  Serial.print("Load A:\t\t");
+  Serial.print(lda);
+  Serial.println("/24");
+
+  Serial.print("Add:\t\t");
+  Serial.print(add);
+  Serial.println("/24");
+
+  Serial.print("Subtract:\t");
+  Serial.print(sub);
+  Serial.println("/24");
+
+  Serial.print("Store A:\t");
+  Serial.print(sta);
+  Serial.println("/24");
+
+  Serial.print("Load Imediate:\t");
+  Serial.print(ldi);
+  Serial.println("/24");
+
+  Serial.print("Jump:\t\t");
+  Serial.print(jmp);
+  Serial.println("/24");
+
+  Serial.print("Output:\t\t");
+  Serial.print(out);
+  Serial.println("/24");
+
+  Serial.print("Halt:\t\t");
+  Serial.print(hlt);
+  Serial.println("/24");
+
+  Serial.println();
 }
 
 void loop() {}
