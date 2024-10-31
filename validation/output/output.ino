@@ -40,15 +40,17 @@ void reset() {
   digitalWrite(RST, LOW);
 }
 
-// Load a value from the bus to the output register
-void display(int value) {
+void set_bus(uint8_t value) {
   for (int i=0; i<BUS_SIZE; i++) {
     digitalWrite(BUS[i], (value>>i)&0x1);
   }
-  digitalWrite(EN_N, LOW);
-  
-  clock_pulse();
+}
 
+// Load a value from the bus to the output register
+void display(int value) {
+  set_bus(value);
+  digitalWrite(EN_N, LOW);
+  clock_pulse();
   digitalWrite(EN_N, HIGH);
 }
 
@@ -58,6 +60,20 @@ void test_count_all() {
   Serial.println("\tDisplay should begin at 0 and count to 255");
   for (int i=0; i<pow(2, BUS_SIZE); i++) {
     display(i);
+    delay(WAIT_TIME);
+  }
+}
+
+void test_enable() {
+  Serial.println("Enable test running");
+  Serial.println("\tDisplay should begin at 0 and count only even numbers up to 255");
+  for (int i=0; i<pow(2, BUS_SIZE); i++) {
+    if (i%2) {
+      set_bus(i);
+      clock_pulse();
+    } else {
+      display(i);
+    }
     delay(WAIT_TIME);
   }
 }
@@ -84,6 +100,7 @@ void setup() {
 
   /* Tests */
   test_count_all();
+  test_enable();
 }
 
 void loop() {}
