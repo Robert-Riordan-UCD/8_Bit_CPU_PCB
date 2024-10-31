@@ -78,6 +78,17 @@ void test_enable() {
   }
 }
 
+void test_reset() {
+  Serial.println("Rest test running");
+  Serial.println("\tDisplay should read 123");
+  display(123);
+  delay(WAIT_TIME);
+  Serial.println("\tReseting");
+  Serial.println("\tDisplay should read 0");
+  reset();
+  delay(WAIT_TIME);
+}
+
 void setup() {
   Serial.begin(9600);
 
@@ -101,6 +112,7 @@ void setup() {
   /* Tests */
   test_count_all();
   test_enable();
+  test_reset();
 }
 
 void loop() {}
