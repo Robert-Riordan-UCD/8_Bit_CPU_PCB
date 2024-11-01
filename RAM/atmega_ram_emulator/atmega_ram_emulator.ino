@@ -1,6 +1,27 @@
 #include "PinChangeInterrupt.h"
 
-uint8_t memory[16] = {}; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
+/* Memory preloaded with instructions to count in 3s */
+// 4 MSB
+//uint8_t memory[16] = {
+//  0b0001, // LDA (15)
+//  0b0010, // ADD (14)
+//  0b1110, // OUT
+//  0b0110, // JMP ( 1)
+//  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // NOOP
+//  0, // (3)
+//  0, // (0)
+//}; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
+
+// 4 LSB
+uint8_t memory[16] = {
+  0b1111, // (LDA) 15
+  0b1110, // (ADD) 14
+  0,      // (OUT)
+  0b0001, // (JMP)  1
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // NOOP
+  3, // 3
+  0, // 0
+}; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
 
 int address_pins[4] = {A0, A1, A2, A3};
 int data_output_pins[4] = {5, 4, 3, 2};
