@@ -192,6 +192,50 @@ int test_ins(uint8_t ins, uint16_t code[6], char *test_name) {
   return pass;
 }
 
+int test_jmpc() {
+  int pass = 0;
+  uint16_t code_carry_set[6] = {MI|PCO, RO|II|PCE, IO|JMP, 0, 0, 0};
+  uint16_t code_carry_not_set[6] = {MI|PCO, RO|II|PCE, 0, 0, 0, 0};
+  set_instruction(0b0111);
+  for (uint8_t flags=0; flags<=3; flags++) {
+    digitalWrite(ALU_CARRY, flags>>1);
+    digitalWrite(ALU_ZERO, flags&1);
+    for (int i=0; i<6; i++) {
+      char buf[100];
+      sprintf(buf, "Jump Carry (0x0111) T=%d (C=%d,Z=%d)", i, (flags>>1)&1, flags&1);
+      if (flags>>1) {
+        pass += test_equal(read_control_signals(), code_carry_set[i], buf);
+      } else {
+        pass += test_equal(read_control_signals(), code_carry_not_set[i], buf);
+      }
+      clock_pulse();
+    }
+  }
+  return pass;
+}
+
+int test_jmpz() {
+  int pass = 0;
+  uint16_t code_carry_set[6] = {MI|PCO, RO|II|PCE, IO|JMP, 0, 0, 0};
+  uint16_t code_carry_not_set[6] = {MI|PCO, RO|II|PCE, 0, 0, 0, 0};
+  set_instruction(0b1000);
+  for (uint8_t flags=0; flags<=3; flags++) {
+    digitalWrite(ALU_CARRY, flags>>1);
+    digitalWrite(ALU_ZERO, flags&1);
+    for (int i=0; i<6; i++) {
+      char buf[100];
+      sprintf(buf, "Jump Zero (0x1000) T=%d (C=%d,Z=%d)", i, (flags>>1)&1, flags&1);
+      if (flags&1) {
+        pass += test_equal(read_control_signals(), code_carry_set[i], buf);
+      } else {
+        pass += test_equal(read_control_signals(), code_carry_not_set[i], buf);
+      }
+      clock_pulse();
+    }
+  }
+  return pass;
+}
+
 void setup() {
   Serial.begin(9600);
 
@@ -249,6 +293,8 @@ void setup() {
   int jmp = test_ins(6, code[6], "Jump");
   int out = test_ins(14, code[7], "Output");
   int hlt = test_ins(15, code[8], "Halt");
+  int jmpc = test_jmpc();
+  int jmpz = test_jmpz();
 
   Serial.print("No OP:\t\t");
   Serial.print(noop);
@@ -286,6 +332,14 @@ void setup() {
   Serial.print(hlt);
   Serial.println("/24");
 
+  Serial.print("Jump carry:\t");
+  Serial.print(jmpc);
+  Serial.println("/24");
+
+  Serial.print("Jump zero:\t");
+  Serial.print(jmpz);
+  Serial.println("/24");
+  
   Serial.println();
 }
 
