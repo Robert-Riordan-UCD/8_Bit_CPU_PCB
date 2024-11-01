@@ -1988,7 +1988,7 @@
 	)
 	(hierarchical_label "~{RST}"
 		(shape output)
-		(at 124.46 64.77 0)
+		(at 124.46 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2024,7 +2024,7 @@
 	)
 	(hierarchical_label "RST"
 		(shape output)
-		(at 124.46 48.26 0)
+		(at 124.46 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
