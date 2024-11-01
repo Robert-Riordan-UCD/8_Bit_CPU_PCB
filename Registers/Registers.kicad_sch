@@ -5207,6 +5207,17 @@
 		)
 		(uuid "7d53823d-ca84-4e01-abe5-3c9735f2e19f")
 	)
+	(label "~{WRITE}"
+		(at 48.26 182.88 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "91a91302-254f-4470-931f-b646ca46af14")
+	)
 	(label "Bus4"
 		(at 195.58 62.23 90)
 		(fields_autoplaced yes)
@@ -7888,6 +7899,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 48.26 175.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aee455eb-8ffa-474a-8d16-4d17c4b3252d")
+		(property "Reference" "#PWR014"
+			(at 48.26 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 48.26 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 48.26 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4394a11f-7a28-46a9-a859-2f8ba01da861")
+		)
+		(instances
+			(project ""
+				(path "/6db53e48-b6be-4498-bb6c-c508b16e3b63"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 96.52 151.13 90)
 		(unit 1)
@@ -8324,6 +8401,75 @@
 			(project "Registers"
 				(path "/6db53e48-b6be-4498-bb6c-c508b16e3b63"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 48.26 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e85f9869-66d5-40ea-bd37-55beb1fa0981")
+		(property "Reference" "R9"
+			(at 49.784 177.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 49.784 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "_DownloadFootprints:CF_series_Resistors_THT"
+			(at 46.482 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 48.26 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c7d51082-60c3-4fa1-9f6c-d9cce7a612e0")
+		)
+		(pin "1"
+			(uuid "f0c84314-b10d-40a4-b773-d0c4b313441d")
+		)
+		(instances
+			(project "Registers"
+				(path "/6db53e48-b6be-4498-bb6c-c508b16e3b63"
+					(reference "R9")
 					(unit 1)
 				)
 			)
