@@ -1,27 +1,18 @@
 #include "PinChangeInterrupt.h"
 
-/* Memory preloaded with instructions to count in 3s */
-// 4 MSB
-//uint8_t memory[16] = {
-//  0b0001, // LDA (15)
-//  0b0010, // ADD (14)
-//  0b1110, // OUT
-//  0b0110, // JMP ( 1)
-//  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // NOOP
-//  0, // (3)
-//  0, // (0)
-//}; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
+// Set to true to use the top 4 bits of memory instead of the bottom 4 bits
+#define HIGH_NIBBLE true
 
-// 4 LSB
+/* Memory preloaded with instructions to coutn in 3s */
 uint8_t memory[16] = {
-  0b1111, // (LDA) 15
-  0b1110, // (ADD) 14
-  0,      // (OUT)
-  0b0001, // (JMP)  1
+  0b00011111, // (LDA) 15
+  0b00101110, // (ADD) 14
+  0b11100000, // (OUT)
+  0b01100001, // (JMP)  1
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // NOOP
   3, // 3
   0, // 0
-}; // Using 16 8-bit values because there are no 4-bit data types. Bits 7 to 4 are unused on each byte.
+}; // High nibble to be used by if HIGH_NIBBLE is set. Otherwise low nibble will be used
 
 int address_pins[4] = {A0, A1, A2, A3};
 int data_output_pins[4] = {5, 4, 3, 2};
@@ -40,14 +31,14 @@ void writeToRAM () {
     ((uint8_t)digitalRead(data_input_pins[1])<<1) +
     ((uint8_t)digitalRead(data_input_pins[2])<<2) +
     ((uint8_t)digitalRead(data_input_pins[3])<<3);
-  memory[address] = data_in ^ 0b1111;
+  memory[address] = (data_in ^ 0b1111)<<(HIGH_NIBBLE*4);
 }
 
 void readFromRAM() {
   uint16_t address = digitalRead(address_pins[0]) + 2*digitalRead(address_pins[1]) + 4*digitalRead(address_pins[2])+8*digitalRead(address_pins[3]);
   for (int i = 0; i < 4; i++) {
     pinMode(data_output_pins[i], OUTPUT); // Change from high impedence to output
-    digitalWrite(data_output_pins[i], (memory[address]>>i)&0x01);
+    digitalWrite(data_output_pins[i], ((memory[address]>>(HIGH_NIBBLE*4))>>i)&0x01);
   }
 }
 
